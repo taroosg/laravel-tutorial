@@ -74,14 +74,14 @@ MVCでは処理によって役割分担されているため，「処理の順�
 
 リクエスト -> Route -> Controllerの順で処理が実行される．
 
-![MVCの流れ1](./img/laravel_mvc_01.svg)
+![MVCの流れ1](laravel/img/laravel_mvc_01.svg)
 
 ### DBから取り出したデータの流れ
 
 Model -> Controller -> Viewの順で処理が実行される．
 
 
-![MVCの流れ2](./img/laravel_mvc_02.svg)
+![MVCの流れ2](laravel/img/laravel_mvc_02.svg)
 
 ## コツ
 
