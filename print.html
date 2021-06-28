@@ -1,0 +1,3925 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Laravel-Tutorial</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="laravel/index.html"><strong aria-hidden="true">1.</strong> Laravel</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="laravel/laravel01_aws/index.html"><strong aria-hidden="true">1.1.</strong> 【AWS Cloud9編】環境構築とLaravel準備</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="laravel/laravel01_aws/environment.html"><strong aria-hidden="true">1.1.1.</strong> Environment（仮想マシン）準備</a></li><li class="chapter-item expanded "><a href="laravel/laravel01_aws/add-volume.html"><strong aria-hidden="true">1.1.2.</strong> ⚠️ 仮想マシンの容量追加（EC2操作）</a></li><li class="chapter-item expanded "><a href="laravel/laravel01_aws/add-memory.html"><strong aria-hidden="true">1.1.3.</strong> ⚠️ swapメモリ作成</a></li><li class="chapter-item expanded "><a href="laravel/laravel01_aws/laravel-install.html"><strong aria-hidden="true">1.1.4.</strong> Laravelインストール準備</a></li><li class="chapter-item expanded "><a href="laravel/laravel01_aws/create-project.html"><strong aria-hidden="true">1.1.5.</strong> Laravelプロジェクト作成</a></li><li class="chapter-item expanded "><a href="laravel/laravel01_aws/add-laravel-breeze.html"><strong aria-hidden="true">1.1.6.</strong> ライブラリ準備</a></li><li class="chapter-item expanded "><a href="laravel/laravel01_aws/setup-db.html"><strong aria-hidden="true">1.1.7.</strong> データベース準備</a></li></ol></li><li class="chapter-item expanded "><a href="laravel/laravel02_aws/index.html"><strong aria-hidden="true">1.2.</strong> 【AWS Cloud9編】todoアプリケーションの実装</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="laravel/laravel02_aws/laravel-migration.html"><strong aria-hidden="true">1.2.1.</strong> マイグレーションによるテーブル設計</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_aws/laravel-routes-controllers.html"><strong aria-hidden="true">1.2.2.</strong> ルーティングとコントローラ</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_aws/laravel-views.html"><strong aria-hidden="true">1.2.3.</strong> 必要な画面の作成と動作確認</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_aws/laravel-create.html"><strong aria-hidden="true">1.2.4.</strong> データ作成処理の実装</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_aws/laravel-read.html"><strong aria-hidden="true">1.2.5.</strong> データ一覧画面の実装</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_aws/laravel-show.html"><strong aria-hidden="true">1.2.6.</strong> データ詳細画面の実装</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_aws/laravel-delete.html"><strong aria-hidden="true">1.2.7.</strong> データ削除処理の実装</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_aws/laravel-update.html"><strong aria-hidden="true">1.2.8.</strong> データ更新処理の実装</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_aws/laravel-auth.html"><strong aria-hidden="true">1.2.9.</strong> ユーザ情報の利用</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_aws/summary.html"><strong aria-hidden="true">1.2.10.</strong> あとがき</a></li></ol></li><li class="chapter-item expanded "><a href="laravel/laravel01_docker/index.html"><strong aria-hidden="true">1.3.</strong> 【Docker編】環境構築とLaravel準備</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="laravel/laravel01_docker/create-project.html"><strong aria-hidden="true">1.3.1.</strong> Laravelプロジェクト作成</a></li><li class="chapter-item expanded "><a href="laravel/laravel01_docker/add-laravel-breeze.html"><strong aria-hidden="true">1.3.2.</strong> ライブラリ準備</a></li><li class="chapter-item expanded "><a href="laravel/laravel01_docker/setup-db.html"><strong aria-hidden="true">1.3.3.</strong> データベース準備</a></li></ol></li><li class="chapter-item expanded "><a href="laravel/laravel02_docker/index.html"><strong aria-hidden="true">1.4.</strong> 【Docker編】todoアプリケーションの実装</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="laravel/laravel02_docker/laravel-migration.html"><strong aria-hidden="true">1.4.1.</strong> マイグレーションによるテーブル設計</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_docker/laravel-routes-controllers.html"><strong aria-hidden="true">1.4.2.</strong> ルーティングとコントローラ</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_docker/laravel-views.html"><strong aria-hidden="true">1.4.3.</strong> 必要な画面の作成と動作確認</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_docker/laravel-create.html"><strong aria-hidden="true">1.4.4.</strong> データ作成処理の実装</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_docker/laravel-read.html"><strong aria-hidden="true">1.4.5.</strong> データ一覧画面の実装</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_docker/laravel-show.html"><strong aria-hidden="true">1.4.6.</strong> データ詳細画面の実装</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_docker/laravel-delete.html"><strong aria-hidden="true">1.4.7.</strong> データ削除処理の実装</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_docker/laravel-update.html"><strong aria-hidden="true">1.4.8.</strong> データ更新処理の実装</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_docker/laravel-auth.html"><strong aria-hidden="true">1.4.9.</strong> ユーザ情報の利用</a></li><li class="chapter-item expanded "><a href="laravel/laravel02_docker/summary.html"><strong aria-hidden="true">1.4.10.</strong> あとがき</a></li></ol></li><li class="chapter-item expanded "><a href="laravel/deploy/index.html"><strong aria-hidden="true">1.5.</strong> デプロイ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="laravel/deploy/deploy-image.html"><strong aria-hidden="true">1.5.1.</strong> デプロイの概要</a></li><li class="chapter-item expanded "><a href="laravel/deploy/cloud9-to-github.html"><strong aria-hidden="true">1.5.2.</strong> 【AWS Cloud9編】実装したコードをGitHubへpush</a></li><li class="chapter-item expanded "><a href="laravel/deploy/docker-to-github.html"><strong aria-hidden="true">1.5.3.</strong> 【Docker編】実装したコードをGitHubへpush</a></li><li class="chapter-item expanded "><a href="laravel/deploy/setup-lolipop.html"><strong aria-hidden="true">1.5.4.</strong> ローカルからロリポップマネージドクラウドへのログイン</a></li><li class="chapter-item expanded "><a href="laravel/deploy/lolipop-to-github.html"><strong aria-hidden="true">1.5.5.</strong> ロリポップマネージドクラウドとGitHubのSSH通信設定</a></li><li class="chapter-item expanded "><a href="laravel/deploy/github-to-lolipop.html"><strong aria-hidden="true">1.5.6.</strong> GitHub上のコードをマネージドクラウドにデプロイ</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Laravel-Tutorial</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="laravel"><a class="header" href="#laravel">Laravel</a></h1>
+<p>LaravelとはPHPのMVCフレームワークである．</p>
+<h2 id="フレームワークとは"><a class="header" href="#フレームワークとは">フレームワークとは</a></h2>
+<p>フレームワークとは．．．</p>
+<ul>
+<li>ある言語で作るシステムの枠組み．考え方．</li>
+<li>よく使う関数やクラスが用意されている．</li>
+<li>規則が決まっているので，誰が書いても似たコードになる．</li>
+</ul>
+<h3 id="メリットとデメリット"><a class="header" href="#メリットとデメリット">メリットとデメリット</a></h3>
+<ul>
+<li>✅	組み込まれている機能があるので実装の負荷が少ない．</li>
+<li>✅	コードの品質担保による保守管理の負荷低減．</li>
+<li>✅	セキュリティ面での担保．</li>
+<li>🔼	学習コスト．</li>
+<li>🔼	環境構築．</li>
+</ul>
+<h3 id="各言語のフレームワークの例"><a class="header" href="#各言語のフレームワークの例">各言語のフレームワークの例</a></h3>
+<table><thead><tr><th>言語</th><th>フレームワーク</th></tr></thead><tbody>
+<tr><td>PHP</td><td>Laravel, CakePHP, Symphony</td></tr>
+<tr><td>Ruby</td><td>Ruby on Rails</td></tr>
+<tr><td>Python</td><td>Django, Flask</td></tr>
+<tr><td>Node.js</td><td>Express, NestJS</td></tr>
+<tr><td>JavaScript</td><td>Next.js, Gatsby.js, Nuxt.js</td></tr>
+</tbody></table>
+<p>※あくまで一例，他にもたくさんあります．．！</p>
+<h3 id="laravelの特徴"><a class="header" href="#laravelの特徴">Laravelの特徴</a></h3>
+<ul>
+<li>今最もアツいPHPフレームワーク！</li>
+<li>Webサービスで使用する機能が豊富に用意されている．
+<ul>
+<li>DB操作関連の機能（論理削除など）</li>
+<li>メール通知機能</li>
+</ul>
+</li>
+<li>画面を柔軟に作成できるbladeテンプレート．</li>
+<li><code>artisan</code>コマンドによる手軽なライブラリ操作．</li>
+<li>とにかく自由（ディレクトリ構成，処理の記述場所など）</li>
+</ul>
+<h2 id="mvcとは"><a class="header" href="#mvcとは">MVCとは</a></h2>
+<p><strong>MVCとは，役割分担の概念であるッ！</strong></p>
+<p>これまでは適当なPHPファイルに処理を全部書いていた！</p>
+<ul>
+<li>ファイル数が増える．．．</li>
+<li>あの処理，どのファイルに書いたっけ．．？？</li>
+<li>バグあったけど次の処理が他の人の書いたファイルに．．．（チーム開発）</li>
+</ul>
+<p>=&gt; いずれ詰む未来が見える．．．</p>
+<p>=&gt; せや，処理毎に別々のところに書いて管理や分類をしやすくしたろ！MVCの3つくらいでええやろ！</p>
+<h3 id="役割分担"><a class="header" href="#役割分担">役割分担</a></h3>
+<table><thead><tr><th>name</th><th>役割</th></tr></thead><tbody>
+<tr><td>Model</td><td>データの操作を行う役割．<br>データの「作成」「参照」「更新」「削除」し，その結果を出力．</td></tr>
+<tr><td>View</td><td>ブラウザの表示領域を作成する役割．<br>受け取ったデータ処理の結果をhtmlに埋め込み，出力する．</td></tr>
+<tr><td>Controller</td><td>リクエストとレスポンスを行う．その間のことをいい感じにやる．<br>ModelとViewに司令を出す，処理の流れを決める役割．</td></tr>
+<tr><td>Route</td><td>アクセスされたURLに応じて処理を振り分ける．URLとControllerの関数の対応を決める．<br>実際の処理はControllerを通じてModelやViewが実行する．</td></tr>
+</tbody></table>
+<h3 id="処理のイメージ"><a class="header" href="#処理のイメージ">処理のイメージ</a></h3>
+<p>MVCでは処理によって役割分担されているため，「処理の順番」と「データ流れ」を把握することが理解への近道である．</p>
+<p>例として，DBから取り出したデータを一覧画面に表示する流れを考えてみる．</p>
+<h3 id="リクエストからの処理の流れ"><a class="header" href="#リクエストからの処理の流れ">リクエストからの処理の流れ</a></h3>
+<p>リクエスト -&gt; Route -&gt; Controllerの順で処理が実行される．</p>
+<p><img src="laravel/./img/laravel_mvc_01.svg" alt="MVCの流れ1" /></p>
+<h3 id="dbから取り出したデータの流れ"><a class="header" href="#dbから取り出したデータの流れ">DBから取り出したデータの流れ</a></h3>
+<p>Model -&gt; Controller -&gt; Viewの順で処理が実行される．</p>
+<p><img src="laravel/./img/laravel_mvc_02.svg" alt="MVCの流れ2" /></p>
+<h2 id="コツ"><a class="header" href="#コツ">コツ</a></h2>
+<h3 id="習うより慣れろッ"><a class="header" href="#習うより慣れろッ">習うより慣れろッ！</a></h3>
+<ul>
+<li>初見で理解することは不可能！
+<ul>
+<li>まずはアプリケーションを作って動かそう！</li>
+<li>処理を見ながら，どこでどの処理を行っているのかを考えよう！</li>
+</ul>
+</li>
+<li>MVC間でのデータの流れを追えるようになるとGood！！</li>
+<li>慣れゲー &amp; 周回ゲー！
+<ul>
+<li>何度も作ることで処理のイメージが湧き，余裕が生まれる．</li>
+<li>「そういえば前回もこの処理書いたな」でOK．</li>
+<li>10周くらいするとだいぶわかる！</li>
+</ul>
+</li>
+</ul>
+<h3 id="余計なことをせずにフレームワークに従う"><a class="header" href="#余計なことをせずにフレームワークに従う">余計なことをせずにフレームワークに従う</a></h3>
+<p><strong>フレームワーク &gt; 越えられない壁 &gt;&gt;&gt; 人間</strong></p>
+<ul>
+<li>フレームワークは人類の叡智！</li>
+<li>素人が安易に改造すると台無し．</li>
+<li>細かい設定などは弄らない！</li>
+<li>自分で実装せずにフレームワークに用意された機能を使え！</li>
+<li>ゴリ押しで書くな！（よくある処理はドキュメントに載ってる）</li>
+</ul>
+<h2 id="get-started"><a class="header" href="#get-started">Get Started!!!</a></h2>
+<p><strong>【超重要】下記の手順でAWS Educateアカウントにログイン</strong></p>
+<ol>
+<li><a href="https://aws.amazon.com/jp/education/awseducate/">https://aws.amazon.com/jp/education/awseducate/</a>にアクセス</li>
+<li>「AWS Educate にサインイン」をクリック</li>
+<li>ページ上段 「My Classroom」をクリック</li>
+<li>今回のクラスに入る -&gt; AWS console</li>
+<li>今後作業途中で再度ログインが必要になっても上記手順でログイン！</li>
+</ol>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="aws-cloud9編環境構築とlaravel準備"><a class="header" href="#aws-cloud9編環境構築とlaravel準備">【AWS Cloud9編】環境構築とLaravel準備</a></h1>
+<p>Laravelで開発をするためには，開発環境を用意する必要がある．一人で開発するときだけでなく，複数人で開発する際には「同じ開発環境」を揃えることが大切である．</p>
+<p>更に，フレームワークやライブラリを多用する場合，個々のPC環境によって細かいバージョンの差異や動作具合に影響が生じることがある．</p>
+<p>主なLaravelの開発環境には以下のようなものがある．</p>
+<ul>
+<li>ローカル環境（XAMPPなど）</li>
+<li>ローカル上の仮想マシン（vagrantなど）</li>
+<li>仮想コンテナ（Dockerなど）</li>
+<li>クラウド上の仮想マシン（AWS Cloud9など）</li>
+</ul>
+<p>今回は全員で同じ環境を揃えるためAWS Cloud9を使い，クラウドの仮想マシン上で開発を行う．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="environment仮想マシン準備"><a class="header" href="#environment仮想マシン準備">Environment（仮想マシン）準備</a></h1>
+<h2 id="environmentの準備"><a class="header" href="#environmentの準備">environmentの準備</a></h2>
+<ul>
+<li>environmentとはアプリケーションを動作させる環境．AWS上に仮想マシンが立ち上がる．</li>
+<li>1つのwebアプリケーションに対して，1つのenvironmentいう理解でOK．</li>
+</ul>
+<p>まず，AWSのマネジメントコンソールから「cloud9」を探してアクセスする．</p>
+<p><img src="laravel/laravel01_aws/../img/20190611-aws_console.png" alt="awsコンソール画面" /></p>
+<p>下記の画面になるので「create environment」をクリック．</p>
+<p><img src="laravel/laravel01_aws/../img/20190611-create_environment.png" alt="cloud9初期画面" /></p>
+<p>名前を適当に入力．（Descriptionは任意）</p>
+<p><img src="laravel/laravel01_aws/../img/20190611-input_name.png" alt="名前入力画面" /></p>
+<p>【重要】「Platform」は「<code>ubuntu server 18.04 LTS</code>」を選択．「Instance type」は「<code>t2.micro</code>」を選択．その他はデフォルトで「create environment」をクリック．</p>
+<p><img src="laravel/laravel01_aws/../img/20190611-setup_01.png" alt="セットアップ画面01" /></p>
+<p>確認画面が出るので「next step」をクリック．</p>
+<p><img src="laravel/laravel01_aws/../img/20190611-setup_02.png" alt="セットアップ画面02" /></p>
+<p>しばらく待つと下記の画面が表示される．これで準備完了．</p>
+<p><img src="laravel/laravel01_aws/../img/20190611-cloud9_aws.png" alt="設定完了後の画面" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="-仮想マシンの容量追加ec2操作"><a class="header" href="#-仮想マシンの容量追加ec2操作">⚠️ 仮想マシンの容量追加（EC2操作）</a></h1>
+<p>⚠️ 本項は2021/05/29時点で不要なので飛ばして問題ない</p>
+<p>environment を作成したことで，AWS 上に仮想マシンが割り当てられた状態となる．しかし，初期状態では容量不足になってしまう．そのため，設定を変更して容量を増やす．</p>
+<ol>
+<li>
+<p>AWS の画面の左上「Services」-&gt;「EC2」にアクセスする．</p>
+</li>
+<li>
+<p>画面左側のメニューから「Instances」をクリックする．</p>
+</li>
+<li>
+<p>インスタンス（仮想マシン）の一覧が表示されるので，該当するもの（Running になっているもの）にチェックを入れる．</p>
+</li>
+<li>
+<p>画面下に表示されるタブの「Storage」をクリックし，表示された「Volume ID」のリンクをクリックする．</p>
+</li>
+<li>
+<p>画面上部の「Actions」をクリックし，「Modify Volume」を選択．「Size」を「10」から「20」に変更し，「Modify」をクリック．なにか訊かれたら「Yes」．</p>
+</li>
+<li>
+<p>画面左側のメニューから「Instances」をクリック．該当するインスタンスにチェックを入れて「Instance State」-&gt;「Reboot Instance」．なにか訊かれたら「Reboot」で進む．</p>
+</li>
+</ol>
+<p>ここまでで仮想マシンの設定は終了．</p>
+<p>設定確認のため，Cloud9 画面のターミナルで下記をコマンド実行する．</p>
+<pre><code class="language-bash">$ df -h
+</code></pre>
+<p>出力結果</p>
+<pre><code class="language-bash">Filesystem      Size  Used Avail Use% Mounted on
+udev            476M     0  476M   0% /dev
+tmpfs            98M  788K   98M   1% /run
+/dev/xvda1       20G  8.7G   11G  45% /
+tmpfs           490M     0  490M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           490M     0  490M   0% /sys/fs/cgroup
+/dev/loop0       13M   13M     0 100% /snap/amazon-ssm-agent/495
+/dev/loop1       88M   88M     0 100% /snap/core/5328
+/dev/loop2       33M   33M     0 100% /snap/amazon-ssm-agent/2996
+/dev/loop3       56M   56M     0 100% /snap/core18/1944
+/dev/loop4       98M   98M     0 100% /snap/core/10577
+tmpfs            98M     0   98M   0% /run/user/1000
+</code></pre>
+<p><code>/dev/xvda1</code>の Size が 20G になっていれば OK．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="-swapメモリ作成"><a class="header" href="#-swapメモリ作成">⚠️ swapメモリ作成</a></h1>
+<p>⚠️ 本項は2021/05/29時点で不要なので飛ばして問題ない</p>
+<p>無料で作成できるインスタンスは実行メモリが 512MB しかなく，途中でメモリ不足になる．</p>
+<p>そのため，ストレージから 1GB の容量を借りてきてメモリに割り当てる（これを swap 領域と呼ぶ）．</p>
+<p>Cloud9 のターミナルで下記コマンドを実行する．swap 領域作成のためのファイルを作成している．</p>
+<pre><code class="language-bash">$ sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">1024+0 records in
+1024+0 records out
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 13.9046 s, 77.2 MB/s
+</code></pre>
+<p>続いて，下記コマンド実行する．作成した swap ファイルの権限を変更し，swap 領域を準備する．</p>
+<pre><code class="language-bash">$ sudo chmod 600 /swapfile
+$ sudo mkswap /swapfile
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+no label, UUID=a0e6a190-14b0-4766-95d5-89bd37782a24
+</code></pre>
+<p>下記コマンドを実行する．実際に swap 領域を作成し，メモリの状況を確認する．</p>
+<pre><code class="language-bash">$ sudo swapon /swapfile
+$ free --mega
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">              total        used        free      shared  buff/cache   available
+Mem:           1002         475          75           2         451         376
+Swap:          1548          13        1535
+</code></pre>
+<p><code>Swap:</code>の<code>total</code>が 1500 程度になっていれば OK．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="laravelインストール準備"><a class="header" href="#laravelインストール準備">Laravelインストール準備</a></h1>
+<h2 id="nodejs-の更新"><a class="header" href="#nodejs-の更新">Node.js の更新</a></h2>
+<p>Laravel（7以降）では，JSやCSSをビルドする必要があり，その際にNode.jsが使用される（実際にNode.jsを書くことはない）．</p>
+<p>しかし，AWS Cloud9ではNode.jsのバージョンが古く，ビルド時に失敗する．そのため，Node.jsを最新バージョンに更新する．</p>
+<p>Node.jsのバージョンを確認するため，Cloud9のターミナルで下記コマンドを実行する．</p>
+<pre><code class="language-bash">$ node -v
+v10.23.0
+</code></pre>
+<p>アップデートするため，下記コマンドを実行する．LTS（安定バージョン）の最新版をインストールする．</p>
+<p><code>nvm</code>は Node.jsの管理ツールであり，AWS Cloud9にはじめからインストールされている．</p>
+<pre><code class="language-bash">$ nvm install --lts
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Installing latest LTS version.
+Downloading https://nodejs.org/dist/v14.15.3/node-v14.15.3-linux-x64.tar.xz...
+################################################################################# 100.0%
+Now using node v14.15.3 (npm v6.14.9)
+nvm_ensure_default_set: a version is required
+</code></pre>
+<p>最新版がインストールされる（今回は<code>14.15.3</code>）．</p>
+<p>このままだとデフォルトのバージョンが古いままなので，下記コマンドを実行してインストールした最新版をデフォルトにする（<code>v14.15.3</code>の部分は上でインストールした番号を入れること）．</p>
+<pre><code class="language-bash">$ nvm alias default v14.15.3
+default -&gt; v14.15.3
+</code></pre>
+<p>アップデート後のバージョンを確認する．</p>
+<pre><code class="language-bash">$ node -v
+v14.15.3
+</code></pre>
+<p>バージョンが上がっていればOK．実行する時期により細かい数字は異なるが，<code>14.*.*</code>のバージョンであれば問題ない．</p>
+<h2 id="phpの更新"><a class="header" href="#phpの更新">PHPの更新</a></h2>
+<p>Laravelの最新版では，PHP7.2.25以上が必要となるが，AWS Cloud9上でインストールされているバージョンは7.2.24であるため，アップデートが必要になる．</p>
+<p>今回は最新であるPHP8にアップデートする．</p>
+<p>以下はバージョンの確認コマンド．</p>
+<pre><code class="language-bash">$ php -v
+PHP 7.2.24-0ubuntu0.18.04.7 (cli) (built: Oct  7 2020 15:24:25) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.2.24-0ubuntu0.18.04.7, Copyright (c) 1999-2018, by Zend Technologies
+    with Xdebug v2.6.0, Copyright (c) 2002-2018, by Derick Rethans
+</code></pre>
+<p>アップデートの準備をする．下記コマンドを実行する．今回のOS「Ubuntu」では，<code>apt</code>と呼ばれるパッケージ管理ツールを使用する．まずは<code>apt</code>に PHPのリポジトリを追加する（追加することで<code>apt</code>がPHPを扱えるようになる）．</p>
+<pre><code class="language-bash">$ sudo add-apt-repository ppa:ondrej/php
+</code></pre>
+<p>なにか訊かれたらEnterで続行．</p>
+<pre><code class="language-bash">...
+# LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+ More info: https://launchpad.net/~ondrej/+archive/ubuntu/php
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">...
+Get:7 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 Packages [81.2 kB]
+Get:8 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main Translation-en [31.7 kB]
+Fetched 222 kB in 1s (154 kB/s)
+Reading package lists... Done
+</code></pre>
+<p>下記コマンドを実行し，<code>apt</code>が管理しているパッケージの最新バージョンをチェックする（たまにエラーになる場合があるが，少し待ってから再度実行するとうまくいく）．</p>
+<pre><code class="language-bash">$ sudo apt update
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">...
+Hit:5 http://ppa.launchpad.net/ondrej/php/ubuntu bionic InRelease
+Get:6 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Fetched 88.7 kB in 1s (124 kB/s)
+Reading package lists... Done
+</code></pre>
+<p>下記コマンドを実行し，PHP8をインストールする．</p>
+<pre><code class="language-bash">$ sudo apt install libapache2-mod-php8.0
+</code></pre>
+<p>なにか訊かれたら<code>y</code>を入力してEnter</p>
+<pre><code class="language-bash">...
+1 upgraded, 7 newly installed, 0 to remove and 24 not upgraded.
+Need to get 4528 kB of archives.
+After this operation, 20.2 MB of additional disk space will be used.
+Do you want to continue? [Y/n]
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">...
+Creating config file /etc/php/8.0/apache2/php.ini with new version
+libapache2-mod-php8.0: php7.2 module already enabled, not enabling PHP 8.0
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1.4) ...
+Processing triggers for php8.0-cli (8.0.0-1+ubuntu18.04.1+deb.sury.org+1) ...
+Processing triggers for libapache2-mod-php8.0 (8.0.0-1+ubuntu18.04.1+deb.sury.org+1) ...
+</code></pre>
+<p>下記コマンドを実行し，現在のPHP7.2を無効化する．</p>
+<pre><code class="language-bash">$ sudo a2dismod php7.2
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Module php7.2 disabled.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+</code></pre>
+<p>下記コマンドを実行し，インストールしたPHP8を有効にする．</p>
+<pre><code class="language-bash">$ sudo a2enmod php8.0
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Considering dependency mpm_prefork for php8.0:
+Considering conflict mpm_event for mpm_prefork:
+Considering conflict mpm_worker for mpm_prefork:
+Module mpm_prefork already enabled
+Considering conflict php5 for php8.0:
+Enabling module php8.0.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+</code></pre>
+<p>下記コマンドを実行し，周辺のモジュールをインストールする．</p>
+<pre><code class="language-bash">$ sudo apt install php8.0-dom php8.0-mbstring php8.0-zip php8.0-mysql
+</code></pre>
+<p>なにか訊かれたら<code>y</code>を入力して Enter．</p>
+<pre><code class="language-bash">After this operation, 2685 kB of additional disk space will be used.
+Do you want to continue? [Y/n]
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">...
+Creating config file /etc/php/8.0/mods-available/zip.ini with new version
+Processing triggers for libapache2-mod-php8.0 (8.0.0-1+ubuntu18.04.1+deb.sury.org+1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1.4) ...
+Processing triggers for php8.0-cli (8.0.0-1+ubuntu18.04.1+deb.sury.org+1) ...
+</code></pre>
+<p>PHPのバージョンを確認し，<code>8.0.x</code>になっていればOK．</p>
+<pre><code class="language-bash">$ php -v
+PHP 8.0.0 (cli) (built: Nov 27 2020 12:26:05) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v4.0.0-dev, Copyright (c) Zend Technologies
+    with Zend OPcache v8.0.0, Copyright (c), by Zend Technologies
+</code></pre>
+<h2 id="composer-のインストール"><a class="header" href="#composer-のインストール">composer のインストール</a></h2>
+<p><code>Compoesr</code>はPHPの依存性管理ツールである．依存性管理ツールとは，あるライブラリに必要な別のライブラリなどを一括で管理していくれるものである．</p>
+<p>Laravelではプロジェクト作成やライブラリのインストールなど，多岐にわたって使用するため，インストールが必要になる．</p>
+<p>Cloud9のターミナルで下記コマンドを実行し，必要なファイルをダウンロードする．</p>
+<pre><code class="language-bash">$ curl -sS https://getcomposer.org/installer | php
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">All settings correct for using Composer
+Downloading...
+
+Composer (version 2.0.8) successfully installed to: /home/ubuntu/environment/composer.phar
+Use it: php composer.phar
+</code></pre>
+<p>下記コマンドを実行する．Composerは決まったディレクトリにファイルを置かないと動作しないため，ダウンロードしたファイルを移動している．</p>
+<pre><code class="language-bash">$ sudo mv composer.phar /usr/bin/composer
+</code></pre>
+<p><code>composer</code>と入力することでバージョンなどが確認できる．</p>
+<pre><code class="language-bash">$ composer
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 2.0.8 2020-12-03 17:20:38
+...
+</code></pre>
+<p>上記のようなバージョン情報が表示されればOK（細かいバージョンは異なっていて問題なし）．</p>
+<p>ここまでで，Laravelでアプリケーションを作成する土台が完成した．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="laravelプロジェクト作成"><a class="header" href="#laravelプロジェクト作成">Laravelプロジェクト作成</a></h1>
+<p>ここから，Laravelのアプリケーションを作成していく．まずは Laravelフレームワークの基本的なファイルを準備する必要がある（準備はコマンドが用意されている）．</p>
+<h2 id="インストーラの準備"><a class="header" href="#インストーラの準備">インストーラの準備</a></h2>
+<p>まずはファイルのダウンロードに使用するインストーラを用意する．下記コマンドを実行．</p>
+<pre><code class="language-bash">$ sudo composer global require &quot;laravel/installer&quot;
+</code></pre>
+<p>なにか訊かれたら<code>yes</code>を入力してEnter．</p>
+<pre><code class="language-bash">Continue as root/super user [yes]?
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">...
+6 package suggestions were added by new dependencies, use `composer suggest` to see details.
+Generating autoload files
+10 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+</code></pre>
+<p>続いて，Laravelのプロジェクトを作成する．Laravelでは「プロジェクト」という単位でアプリケーションを管理する．一つのアプリケーションが一つのプロジェクト，という理解で OK．</p>
+<p>下記コマンドを実行する．<code>laravel_todo</code>が今回のアプリケーション名．</p>
+<pre><code class="language-bash">$ composer create-project laravel/laravel laravel_todo
+</code></pre>
+<p>実行結果（しばらく時間がかかる）</p>
+<pre><code class="language-bash">Package manifest generated successfully.
+73 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+&gt; @php artisan key:generate --ansi
+Application key set successfully.
+</code></pre>
+<p>プロジェクトのディレクトリ（<code>laravel_todo</code>）に移動する．以降，アプリケーションに関する操作はすべて<code>laravel_todo</code>内で実行する．</p>
+<pre><code class="language-bash">$ cd laravel_todo
+</code></pre>
+<p>下記コマンドでインストールされているLaravelのバージョンを確認できる．</p>
+<pre><code class="language-bash">$ php artisan -V
+Laravel Framework 8.20.1
+</code></pre>
+<h2 id="laravelのインストール確認"><a class="header" href="#laravelのインストール確認">Laravelのインストール確認</a></h2>
+<p>Laravelインストールの確認にはwebブラウザで動作させて確認する．Cloud9にはwebサーバが標準で搭載されているため，以下の手順で確認を行う．</p>
+<p>コマンド実行中は他のコマンドを打てないため，別タブで新しくターミナルを立ち上げておくと便利．</p>
+<p>下記コマンドを実行し，webサーバを立ち上げる．</p>
+<pre><code class="language-bash">$ php artisan serve --port=8080
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Starting Laravel development server: http://127.0.0.1:8080
+[Mon Jan  4 13:23:03 2021] PHP 8.0.0 Development Server (http://127.0.0.1:8080) started
+</code></pre>
+<ul>
+<li>
+<p>【重要】サーバーが動いた状態となるが，停止する場合は「<code>ctrl + c</code>」で停止できる．</p>
+</li>
+<li>
+<p>実際の動作は下記手順で確認できる．</p>
+<ol>
+<li>画面上部の「preview」をクリック．</li>
+<li>「prewiew running application」をクリック．</li>
+<li>右下にプレビュー画面が表示される．</li>
+<li>プレビュー画面右上の「Browserの右側のボタン」をクリック．</li>
+<li>新しいタブで下記画面が表示されればOK．</li>
+</ol>
+</li>
+</ul>
+<p><img src="laravel/laravel01_aws/../img/20210104-laravel-firstview.png" alt="トップ画面" /></p>
+<p>動作を確認できたらCloud9のターミナル上で<code>ctrl + c</code>を入力し，一旦サーバを停止させておこう．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ライブラリ準備"><a class="header" href="#ライブラリ準備">ライブラリ準備</a></h1>
+<h3 id="ライブラリ準備-1"><a class="header" href="#ライブラリ準備-1">ライブラリ準備</a></h3>
+<p>作成するアプリケーションでライブラリを使用する場合はコマンドでインストールを行う．今回は認証を実装するための<code>Laravel Breeze</code>をインストールする．</p>
+<p>下記コマンドを実行し，必要なファイルをダウンロードする．</p>
+<p><strong>（必ず<code>laravel_todo</code>ディレクトリで実行すること）</strong></p>
+<pre><code class="language-bash">$ composer require laravel/breeze --dev
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">...
+Discovered Package: nesbot/carbon
+Discovered Package: nunomaduro/collision
+Package manifest generated successfully.
+73 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+</code></pre>
+<p>下記コマンドでインストールする．</p>
+<pre><code class="language-bash">$ php artisan breeze:install
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Breeze scaffolding installed successfully.
+Please execute the &quot;npm install &amp;&amp; npm run dev&quot; command to build your assets.
+</code></pre>
+<p>下記コマンドを実行し，その他必要なパッケージをインストールしてビルドする（ここでNode.jsが動く）．</p>
+<pre><code class="language-bash">$ npm install &amp;&amp; npm run dev
+</code></pre>
+<p>実行結果（やや時間がかかる）</p>
+<pre><code class="language-bash"> DONE  Compiled successfully in 35024ms                                       3:03:55 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  3.75 MiB  /js/app  [emitted]  /js/app
+  /js/app.js   669 KiB  /js/app  [emitted]  /js/app
+</code></pre>
+<h3 id="https-と-http-混在状態で動作するように設定"><a class="header" href="#https-と-http-混在状態で動作するように設定">https と http 混在状態で動作するように設定</a></h3>
+<p>AWS cloud9で動かす場合，<code>https</code>と <code>http</code>が混在する問題があり，下記設定を行わないとトップページ以外動作しない．</p>
+<p><code>laravel_todo/app/Http/Middleware/TrustProxies.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Middleware;
+
+use Fideloper\Proxy\TrustProxies as Middleware;
+use Illuminate\Http\Request;
+
+class TrustProxies extends Middleware
+{
+  /**
+   * The trusted proxies for this application.
+   *
+   * @var array|string|null
+   */
+  // ↓この1行を編集
+  protected $proxies = '*';
+
+  /**
+   * The headers that should be used to detect proxies.
+   *
+   * @var int
+   */
+  protected $headers = Request::HEADER_X_FORWARDED_ALL;
+}
+</code></pre>
+<p>記述したらサーバを立ち上げ，動作を確認する．</p>
+<pre><code class="language-bash">$ php artisan serve --port=8080
+</code></pre>
+<p>プレビューして以下の画面が表示されればOK（右上に<code>Login</code>と<code>register</code>が表示される）．</p>
+<p><img src="laravel/laravel01_aws/../img/20210104-breeze-installed.png" alt="breezeインストール確認" /></p>
+<p>右上の<code>register</code>をクリックするとユーザ登録画面に移動するが，まだこの段階ではユーザ登録機能は動作しない．ユーザ登録画面が表示されればOK．</p>
+<p><img src="laravel/laravel01_aws/../img/20210104-register.png" alt="register画面" /></p>
+<p>もし register画面が表示されない場合は下記の手順を実行する．</p>
+<ol>
+<li>一旦サーバを停止する．</li>
+<li>EC2 設定画面からインスタンスを再起動．</li>
+<li>再度サーバ立ち上げて動作確認．</li>
+</ol>
+<p>ここまででライブラリの準備は完了．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データベース準備"><a class="header" href="#データベース準備">データベース準備</a></h1>
+<h2 id="mysqlの準備"><a class="header" href="#mysqlの準備">MySQLの準備</a></h2>
+<p>今回のtodoリストアプリケーションでは，DBとしてMySQLを使用する．</p>
+<p>すでにMySQL自体は動作する状態になっているが，Laravelから扱うにはいくつかの設定が必要となる．下記コマンドを実行し，MySQLにログインする．</p>
+<pre><code class="language-bash">$ sudo mysql
+</code></pre>
+<p>実行結果．今回は管理者でログインした状態．</p>
+<pre><code class="language-bash">...
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt;
+</code></pre>
+<p>下記コマンドを実行し，ユーザ名「<code>root</code>」パスワード「<code>root</code>」で入れるように設定する．</p>
+<blockquote>
+<p>【解説】</p>
+<p>Laravelから扱うには，何らかのユーザ名とパスワードでMySQLにログインできるよう設定しておく必要がある．デプロイする際のレンタルサーバなどでは，予めユーザとパスワードが設定されている場合がほとんどなので本項の実施は必要ない場合が多い．</p>
+</blockquote>
+<pre><code class="language-bash">mysql&gt; ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Query OK, 0 rows affected (0.02 sec)
+</code></pre>
+<p>設定できたらログアウトする．</p>
+<pre><code class="language-bash">mysql&gt; exit;
+Bye
+</code></pre>
+<p>ユーザ名<code>root</code>パスワード<code>root</code>でログインできることを確認する．下記コマンドを実行．</p>
+<pre><code class="language-bash">$ mysql -u root -p
+</code></pre>
+<p>パスワードを求められるので「root」を入力して Enter（パスワードは画面上に表示されないので注意）．</p>
+<p>実行結果</p>
+<pre><code class="language-bash">Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt;
+</code></pre>
+<p>今回のアプリケーションで使用するデータベースを作成する．データベース名は <code>laravel_todo</code>とする．</p>
+<p>下記コマンドを実行でデータベースを作成．</p>
+<pre><code class="language-bash">mysql&gt; create database laravel_todo;
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Query OK, 1 row affected (0.00 sec)
+</code></pre>
+<p>下記コマンドを実行してデータベースの一覧を表示する．</p>
+<pre><code class="language-bash">mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| laravel_todo       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.02 sec)
+</code></pre>
+<p>確認できたらログアウトする．</p>
+<pre><code class="language-bash">mysql&gt; exit;
+Bye
+</code></pre>
+<p>これで MySQL 側の準備は完了．</p>
+<h2 id="laravelからdbに接続するための準備"><a class="header" href="#laravelからdbに接続するための準備">LaravelからDBに接続するための準備</a></h2>
+<p>続いて，LaravelからMySQLにアクセスするための設定を行う．前項で設定したユーザ名，パスワードなどを設定ファイルに記述する．</p>
+<p>Cloud9画面左側のツリーから<code>.env</code>ファイルを開く．<code>.env</code>ファイルは<code>laravel_todo</code>ディレクトリの直下に配置されている．</p>
+<p>なお，<code>.env</code>ファイルは隠しファイルなので表示されない場合がある．その場合は，ツリー画面右上の歯車マークをクリックして「Show Hidden Files」にチェックを入れると表示される．</p>
+<p><code>.env</code>ファイルをダブルクリックして開き，10-15行目を以下のように編集する（コメントは削除しよう）．</p>
+<pre><code class="language-env">DB_CONNECTION=mysql
+DB_HOST=localhost         // 編集
+DB_PORT=3306
+DB_DATABASE=laravel_todo  // 編集
+DB_USERNAME=root
+DB_PASSWORD=root          // 編集
+</code></pre>
+<p><code>.env</code>ファイルを更新したらキャッシュをクリアする．</p>
+<blockquote>
+<p>【解説】</p>
+<p>設定ファイルはサーバ起動時にキャッシュに保存されるため，変更した場合は「キャッシュをクリアする」「サーバを立ち上げ直す」のどちらかが必要になる．</p>
+</blockquote>
+<pre><code class="language-bash">$ php artisan config:cache
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Configuration cache cleared!
+Configuration cached successfully!
+</code></pre>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="aws-cloud9編todoアプリケーションの実装"><a class="header" href="#aws-cloud9編todoアプリケーションの実装">【AWS Cloud9編】todoアプリケーションの実装</a></h1>
+<p>基本的なCRUD処理を実装する．</p>
+<p>Laravelでは，テーブル設計，データ操作，画面表示などアプリケーションの流れを一貫して実装することができ，開発を支援するライブラリやコマンドも豊富に用意されている．</p>
+<p>todoアプリケーションの実装を通して，これらの機能を体験する．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="マイグレーションによるテーブル設計"><a class="header" href="#マイグレーションによるテーブル設計">マイグレーションによるテーブル設計</a></h1>
+<h2 id="テーブル設計マイグレーション"><a class="header" href="#テーブル設計マイグレーション">テーブル設計（マイグレーション）</a></h2>
+<p>今回のアプリケーションはtodoリストなので「todos」テーブルを作成する．</p>
+<p>Laravelでは「マイグレーション」という仕組みを使用してテーブルの管理を行う．また，テーブル内のデータは「Model」を使用して操作する．Laravelでは<code>Eroquent Model</code>と呼ばれるORMを使用する．</p>
+<blockquote>
+<p>【解説 / マイグレーション】</p>
+<ul>
+<li>マイグレーションとは「マイグレーションファイル」を用いてテーブルを管理する仕組み．</li>
+<li>「マイグレーションファイル」にテーブル名やカラム名を記述し，指定されたコマンドを実行することで設定したテーブルが生成される．</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>【解説 / Eloquent Model】</p>
+<ul>
+<li>Eloquent ModelはLaravel標準のORM（object-relational mapper）である．</li>
+<li>ORMとは，DBのレコードをオブジェクトとして直感的に扱えるようにしたもので，SQLを意識せずにプログラムで処理を記述することができる．</li>
+<li>Eloquent Modelは定義された「Model」を用いることで簡単にDBへのデータ保存・取得などを行える．</li>
+<li>1つのモデルが1つのテーブルに対応する．例えば，<code>todos</code>テーブルに対して<code>Todo</code>のようにモデルを定義すると自動的に対応する．モデル内に明示的に対応を記述することもできる．</li>
+<li>テーブルに対してデータ操作を行う場合，対応するモデルに対して処理を実行することでDB操作を行うことができる．</li>
+</ul>
+</blockquote>
+<p>Modelとマイグレーションファイルは一度に両方とも作成することができる．</p>
+<p>下記コマンドはModelを作成するコマンドだが（<code>Todo</code>がモデル名），<code>-m</code>をつけることでマイグレーションファイルも同時に作成できる．この手法を用いることで，Model名とマイグレーションファイル内のテーブル名が自動的に対応する．</p>
+<p>早速実行．</p>
+<pre><code class="language-bash">$ php artisan make:model Todo -m
+</code></pre>
+<p>実行結果（日付時刻は毎回変わる）</p>
+<pre><code class="language-bash">Model created successfully.
+Created Migration: 2020_12_31_033638_create_todos_table
+</code></pre>
+<p><code>laravel_todo/database/migration/2020_12_31_033638_create_todos_table.php</code>を開く．これがマイグレーションファイルである．</p>
+<p>カラムを追加するため，下記にように編集する．今回は<code>todo</code>，<code>deadline</code>，<code>comment</code>の3カラムを追加する．</p>
+<p>カラムを追加するときはデータ型も設定する．<code>todo</code>は文字列（<code>string</code>），<code>deadline</code>は日付（<code>date</code>），<code>comment</code>はテキスト（<code>text</code>）を設定している．</p>
+<p><code>id</code>ははじめから用意されているので設定不要．</p>
+<blockquote>
+<p>【tips】</p>
+<ul>
+<li><code>nullable()</code>を記述することで，入力必須でなくすることができる．他に<code>unique()</code>で重複を禁止することもできる．</li>
+<li><code>timestamps()</code>は<code>created_at</code>カラムと<code>updated_at</code>カラムを自動的に設定してくれる．</li>
+</ul>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateTodosTable extends Migration
+{
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create('todos', function (Blueprint $table) {
+      $table-&gt;id();
+      // ↓追加
+      $table-&gt;string('todo');
+      $table-&gt;date('deadline');
+      $table-&gt;text('comment')-&gt;nullable();
+      // ↑ここまで
+      $table-&gt;timestamps();
+    });
+  }
+
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists('todos');
+  }
+}
+</code></pre>
+<p>これでテーブルの設計は完了だが，MySQLのバージョンによってはエラーが発生するため，次の設定を行う．</p>
+<p><code>/laravel_todo/app/Providers/AppServiceProvider.php</code>の内容を以下のように編集する．<code>string</code>型の最大長を191に変更する．</p>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li>この設定が必要かどうかはMySQLのバージョンによる．MySQLのバージョンが<code>5.7.7</code>以下の場合は必要となる．</li>
+<li>Laravelのマイグレーションでは文字列の最大長が<code>255</code>として実行するが，MySQL5.7.7以下では最大長が<code>191</code>となっているためである．</li>
+</ul>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;  // 追記
+
+class AppServiceProvider extends ServiceProvider
+{
+  /**
+   * Register any application services.
+   *
+   * @return void
+   */
+  public function register()
+  {
+    //
+  }
+
+  /**
+   * Bootstrap any application services.
+   *
+   * @return void
+   */
+  public function boot()
+  {
+    Schema::defaultStringLength(191); // 追記
+  }
+}
+</code></pre>
+<p>マイグレーションを実行するとテーブルが作成される．以下のコマンドを実行する．</p>
+<pre><code class="language-bash">$ php artisan migrate
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (31.23ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (29.71ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (30.85ms)
+Migrating: 2020_12_31_033638_create_todos_table
+Migrated:  2020_12_31_033638_create_todos_table (14.63ms)
+</code></pre>
+<p>エラーになる場合はマイグレーションファイルの内容が間違っていることが多い．修正して以下のコマンドを実行する．</p>
+<pre><code class="language-bash">$ php artisan migrate:fresh
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>:fresh</code>をつけることで，存在しているテーブルを一旦削除し，再度マイグレーションを実行することができる．</li>
+<li>マイグレーションに失敗した場合はエラーが発生するまでに実行された部分はテーブルが作成される．しかし，マイグレーション実行時に，すでに同名のテーブルが存在している場合はエラーになるため，既存テーブルを削除する必要がある．</li>
+</ul>
+</blockquote>
+<p>うまくいったら，mysqlにログインしてテーブルを確認する．</p>
+<pre><code class="language-bash">$ mysql -u root -p
+
+mysql&gt; use laravel_todo;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+
+mysql&gt; show tables;
++------------------------+
+| Tables_in_laravel_todo |
++------------------------+
+| failed_jobs            |
+| migrations             |
+| password_resets        |
+| todos                  |
+| users                  |
++------------------------+
+5 rows in set (0.00 sec)
+
+mysql&gt; desc todos;
++------------+---------------------+------+-----+---------+----------------+
+| Field      | Type                | Null | Key | Default | Extra          |
++------------+---------------------+------+-----+---------+----------------+
+| id         | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| todo       | varchar(191)        | NO   |     | NULL    |                |
+| deadline   | date                | NO   |     | NULL    |                |
+| comment    | text                | YES  |     | NULL    |                |
+| created_at | timestamp           | YES  |     | NULL    |                |
+| updated_at | timestamp           | YES  |     | NULL    |                |
++------------+---------------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql&gt; exit;
+Bye
+</code></pre>
+<p>この段階で，ユーザテーブルなどの認証に使用するテーブルも用意された状態となる．</p>
+<p>アプリケーションを立ち上げて，右上の<code>register</code>から適当にユーザを登録しておこう．</p>
+<pre><code class="language-bash">$ php artisan serve --port=8080
+</code></pre>
+<blockquote>
+<p>【tips】</p>
+<p><code>Email</code>は<code>example.com</code>を使用する．これはテスト用に用意されているドメインであり，誰かのメールアドレスを使用していしまうリスクを回避できる．</p>
+</blockquote>
+<p>ユーザ登録が完了すると，下記の画面が表示される．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-register-success.png" alt="ユーザ登録完了" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ルーティングとコントローラ"><a class="header" href="#ルーティングとコントローラ">ルーティングとコントローラ</a></h1>
+<p>Laravelでは，クライアントからリクエストされたURLに対して，どの関数を実行するかを決める．この対応を決定するのが「ルーティング」であり，実際に実行される関数を記述するのが「コントローラ」である．</p>
+<h2 id="ルーティングとコントローラの作成"><a class="header" href="#ルーティングとコントローラの作成">ルーティングとコントローラの作成</a></h2>
+<p>コントローラとルーティングを作成する．今回のコントローラ名は<code>TodoController</code>とする．</p>
+<p><code>--resource</code>をつけることで，よく使用する処理（代表的なCRUD処理）を一括して作成することができる．</p>
+<p>下記コマンドを実行する．</p>
+<pre><code class="language-bash">$ php artisan make:controller TodoController --resource
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Controller created successfully.
+</code></pre>
+<p>これでコントローラファイルが作成された．続いてルーティングを作成する．</p>
+<p><strong>ルーティングファイルは<code>laravel_todo/routes</code>以下に配置される．</strong></p>
+<p><code>/laravel_todo/routes/web.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;?php
+
+use Illuminate\Support\Facades\Route;
+// 下記1行を追記
+use App\Http\Controllers\TodoController;
+
+Route::get('/', function () {
+  return view('welcome');
+});
+
+// 下記1行を追記
+Route::resource('todo', TodoController::class);
+
+Route::get('/dashboard', function () {
+  return view('dashboard');
+})-&gt;middleware(['auth'])-&gt;name('dashboard');
+
+require __DIR__ . '/auth.php';
+
+</code></pre>
+<p>ルーティングの一覧は下記で確認できる．</p>
+<pre><code class="language-bash">$ php artisan route:list
+</code></pre>
+<p>実行結果（ユーザ操作などのルーティングは省略）</p>
+<blockquote>
+<p>【解説】</p>
+<p><strong>この表は非常に重要．</strong></p>
+<ul>
+<li>例えば，<code>/todo/</code>に<code>GET</code>でリクエストが来た場合，<code>TodoController</code>の<code>index</code>関数が動作することを示している．</li>
+<li>このように，URLと動作する関数の対応を決めているのがルーティングである．</li>
+</ul>
+</blockquote>
+<pre><code class="language-bash">+--------+-----------+---------------------------------+---------------------+------------------------------------------------+--------------+
+| Domain | Method    | URI                             | Name                | Action                                         | Middleware   |
++--------+-----------+---------------------------------+---------------------+------------------------------------------------+--------------+
+|        | GET|HEAD  | todo                            | todo.index          | App\Http\Controllers\TodoController@index      | web          |
+|        | POST      | todo                            | todo.store          | App\Http\Controllers\TodoController@store      | web          |
+|        | GET|HEAD  | todo/create                     | todo.create         | App\Http\Controllers\TodoController@create     | web          |
+|        | GET|HEAD  | todo/{todo}                     | todo.show           | App\Http\Controllers\TodoController@show       | web          |
+|        | PUT|PATCH | todo/{todo}                     | todo.update         | App\Http\Controllers\TodoController@update     | web          |
+|        | DELETE    | todo/{todo}                     | todo.destroy        | App\Http\Controllers\TodoController@destroy    | web          |
+|        | GET|HEAD  | todo/{todo}/edit                | todo.edit           | App\Http\Controllers\TodoController@edit       | web          |
++--------+-----------+---------------------------------+---------------------+------------------------------------------------+--------------+
+</code></pre>
+<p>これで，ルーティング部分は完了である．</p>
+<h2 id="コントローラの実装一部"><a class="header" href="#コントローラの実装一部">コントローラの実装（一部）</a></h2>
+<p>URLにリクエストが来た場合に実行される関数はコントローラに記述される．まずはリクエストが来た場合に特定の画面を表示するよう処理を記述する．</p>
+<p><strong>コントローラは<code>laravel_todo/app/Http/Controllers</code>以下に配置される．</strong></p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の内容を以下のように編集する．</p>
+<p><code>view()</code>関数は指定したビューファイル（画面）を表示する．<code>todo.index</code>は<code>todo</code>フォルダの<code>index.blade.php</code>の意味．ビューファイルは次項で作成する．</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+// 下記2行を追加
+use Validator;
+use App\Models\Todo;
+
+class TodoController extends Controller
+{
+  /**
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function index()
+  {
+    // 追加
+    return view('todo.index');
+  }
+
+  /**
+   * Show the form for creating a new resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function create()
+  {
+    // 追記
+    return view('todo.create');
+  }
+
+  // 以降は変更なし
+}
+
+</code></pre>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="必要な画面の作成"><a class="header" href="#必要な画面の作成">必要な画面の作成</a></h1>
+<h2 id="共通画面の作成"><a class="header" href="#共通画面の作成">共通画面の作成</a></h2>
+<p>実際にブラウザ画面に表示される内容を記述する．ビューファイルは<code>*.blade.php</code>の形式で作成する．これは「bladeテンプレート」と呼ばれる形式であり，コントローラとのデータのやり取りなどに最適化されている．</p>
+<p><strong>ビューファイルは<code>latavel_todo/resources/view</code>ディレクトリ以下に配置する．</strong></p>
+<h3 id="共通画面の調整"><a class="header" href="#共通画面の調整">共通画面の調整</a></h3>
+<p>bladeテンプレートでは共通パーツと個別パーツを組み合わせて画面を構成する．例えば，アプリケーション全体を通して表示されるナビゲーションバーやエラー画面などは共通パーツである．</p>
+<p>それぞれのパーツは「コンポーネント」と呼ばれる．</p>
+<p>まずは画面の基本となる HTML 部分のコンポーネント（<code>app.blade.php</code>）を編集する．</p>
+<p><code>latavel_todo/resources/view/layouts/app.blade.php</code>を以下のように編集する．</p>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>secure_asset()</code>は<code>https</code>のリクエストでファイルを読み込むために必要となる．</li>
+<li>これを変更しておかないと，CSSファイルなどが読み込めずにスタイルが反映されない．</li>
+<li>ビューファイル中の<code>$slot</code>部分に個別パーツのコンポーネントが差し込まれる．</li>
+</ul>
+</blockquote>
+<pre><code class="language-php">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;{{ str_replace('_', '-', app()-&gt;getLocale()) }}&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;meta name=&quot;csrf-token&quot; content=&quot;{{ csrf_token() }}&quot;&gt;
+
+  &lt;title&gt;{{ config('app.name', 'Laravel') }}&lt;/title&gt;
+
+  &lt;!-- Fonts --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap&quot;&gt;
+
+  &lt;!-- Styles --&gt;
+  &lt;!-- ↓変更 --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;{{ secure_asset('css/app.css') }}&quot;&gt;
+
+  &lt;!-- Scripts --&gt;
+  &lt;!-- ↓変更 --&gt;
+  &lt;script src=&quot;{{ secure_asset('js/app.js') }}&quot; defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body class=&quot;font-sans antialiased&quot;&gt;
+  &lt;div class=&quot;min-h-screen bg-gray-100&quot;&gt;
+    @include('layouts.navigation')
+
+    &lt;!-- Page Heading --&gt;
+    &lt;header class=&quot;bg-white shadow&quot;&gt;
+      &lt;div class=&quot;max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8&quot;&gt;
+        {{ $header }}
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;!-- Page Content --&gt;
+    &lt;main&gt;
+      {{ $slot }}
+    &lt;/main&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="共通パーツエラー表示の作成"><a class="header" href="#共通パーツエラー表示の作成">共通パーツ（エラー表示）の作成</a></h3>
+<p>入力値が不正な場合などはエラー画面を表示して対応する．</p>
+<p>todoの入力や編集など複数の画面で必要となるため，共通のコンポーネントとして作成する．</p>
+<p><code>latavel_todo/resources/view</code>の中に<code>common</code>フォルダを作成する．
+<code>common</code>フォルダの中に<code>errors.blade.php</code>ファイルを作成する．</p>
+<p><code>errors.blade.php</code>に以下の内容を記述する．</p>
+<pre><code class="language-php">@if (count($errors) &gt; 0)
+&lt;div&gt;
+  &lt;div class=&quot;font-medium text-red-600&quot;&gt;
+    {{ __('Whoops! Something went wrong.') }}
+  &lt;/div&gt;
+
+  &lt;ul class=&quot;mt-3 list-disc list-inside text-sm text-red-600&quot;&gt;
+    @foreach ($errors-&gt;all() as $error)
+    &lt;li&gt;{{ $error }}&lt;/li&gt;
+    @endforeach
+  &lt;/ul&gt;
+&lt;/div&gt;
+@endif
+</code></pre>
+<h3 id="共通パーツナビゲーションバーの作成"><a class="header" href="#共通パーツナビゲーションバーの作成">共通パーツ（ナビゲーションバー）の作成</a></h3>
+<p>ナビゲーションバーもアプリケーションを通じて使用するため，共通パーツとして作成する．</p>
+<p>「todo一覧」と「todo作成」の 2 種類のリンクを作成しておく．</p>
+<p><code>laravel_todo/resources/views/layouts/navigation.blade.php</code>の内容を以下のように編集する．</p>
+<p>全部で4箇所追記があるので注意．</p>
+<pre><code class="language-php">&lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white border-b border-gray-100&quot;&gt;
+  &lt;!-- Primary Navigation Menu --&gt;
+  &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+    &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+      &lt;div class=&quot;flex&quot;&gt;
+        &lt;!-- Logo --&gt;
+        &lt;div class=&quot;flex-shrink-0 flex items-center&quot;&gt;
+          &lt;a href=&quot;{{ route('dashboard') }}&quot;&gt;
+            &lt;x-application-logo class=&quot;block h-10 w-auto fill-current text-gray-600&quot; /&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Navigation Links --&gt;
+        &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ml-10 sm:flex&quot;&gt;
+          &lt;x-nav-link :href=&quot;route('dashboard')&quot; :active=&quot;request()-&gt;routeIs('dashboard')&quot;&gt;
+            {{ __('Dashboard') }}
+          &lt;/x-nav-link&gt;
+        &lt;/div&gt;
+        &lt;!-- ↓一覧ページへのリンクを追加 --&gt;
+        &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ml-10 sm:flex&quot;&gt;
+          &lt;x-nav-link :href=&quot;route('todo.index')&quot; :active=&quot;request()-&gt;routeIs('todo.index')&quot;&gt;
+            {{ __('Index') }}
+          &lt;/x-nav-link&gt;
+        &lt;/div&gt;
+        &lt;!-- ↓作成ページへのリンクを追加 --&gt;
+        &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ml-10 sm:flex&quot;&gt;
+          &lt;x-nav-link :href=&quot;route('todo.create')&quot; :active=&quot;request()-&gt;routeIs('todo.create')&quot;&gt;
+            {{ __('Create') }}
+          &lt;/x-nav-link&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Settings Dropdown --&gt;
+      &lt;div class=&quot;hidden sm:flex sm:items-center sm:ml-6&quot;&gt;
+        &lt;x-dropdown align=&quot;right&quot; width=&quot;48&quot;&gt;
+          &lt;x-slot name=&quot;trigger&quot;&gt;
+            &lt;button class=&quot;flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out&quot;&gt;
+              &lt;div&gt;{{ Auth::user()-&gt;name }}&lt;/div&gt;
+
+              &lt;div class=&quot;ml-1&quot;&gt;
+                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                  &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                &lt;/svg&gt;
+              &lt;/div&gt;
+            &lt;/button&gt;
+          &lt;/x-slot&gt;
+
+          &lt;x-slot name=&quot;content&quot;&gt;
+            &lt;!-- Authentication --&gt;
+            &lt;form method=&quot;POST&quot; action=&quot;{{ route('logout') }}&quot;&gt;
+              @csrf
+
+              &lt;x-dropdown-link :href=&quot;route('logout')&quot; onclick=&quot;event.preventDefault();
+                                                this.closest('form').submit();&quot;&gt;
+                {{ __('Logout') }}
+              &lt;/x-dropdown-link&gt;
+            &lt;/form&gt;
+          &lt;/x-slot&gt;
+        &lt;/x-dropdown&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Hamburger --&gt;
+      &lt;div class=&quot;-mr-2 flex items-center sm:hidden&quot;&gt;
+        &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out&quot;&gt;
+          &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+            &lt;path :class=&quot;{'hidden': open, 'inline-flex': ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+            &lt;path :class=&quot;{'hidden': ! open, 'inline-flex': open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Responsive Navigation Menu --&gt;
+  &lt;div :class=&quot;{'block': open, 'hidden': ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+    &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+      &lt;x-responsive-nav-link :href=&quot;route('dashboard')&quot; :active=&quot;request()-&gt;routeIs('dashboard')&quot;&gt;
+        {{ __('Dashboard') }}
+      &lt;/x-responsive-nav-link&gt;
+    &lt;/div&gt;
+    &lt;!-- ↓一覧ページへのリンクを追加 --&gt;
+    &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+      &lt;x-responsive-nav-link :href=&quot;route('todo.index')&quot; :active=&quot;request()-&gt;routeIs('todo.index')&quot;&gt;
+        {{ __('Index') }}
+      &lt;/x-responsive-nav-link&gt;
+    &lt;/div&gt;
+    &lt;!-- ↓作成ページへのリンクを追加 --&gt;
+    &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+      &lt;x-responsive-nav-link :href=&quot;route('todo.create')&quot; :active=&quot;request()-&gt;routeIs('todo.create')&quot;&gt;
+        {{ __('Create') }}
+      &lt;/x-responsive-nav-link&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Settings Options --&gt;
+    &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200&quot;&gt;
+      &lt;div class=&quot;flex items-center px-4&quot;&gt;
+        &lt;div class=&quot;flex-shrink-0&quot;&gt;
+          &lt;svg class=&quot;h-10 w-10 fill-current text-gray-400&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;
+            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;ml-3&quot;&gt;
+          &lt;div class=&quot;font-medium text-base text-gray-800&quot;&gt;{{ Auth::user()-&gt;name }}&lt;/div&gt;
+          &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;{{ Auth::user()-&gt;email }}&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+        &lt;!-- Authentication --&gt;
+        &lt;form method=&quot;POST&quot; action=&quot;{{ route('logout') }}&quot;&gt;
+          @csrf
+
+          &lt;x-responsive-nav-link :href=&quot;route('logout')&quot; onclick=&quot;event.preventDefault();
+                                        this.closest('form').submit();&quot;&gt;
+            {{ __('Logout') }}
+          &lt;/x-responsive-nav-link&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li>Laravel8のビューは CSS フレームワークの<code>tailwind</code>を使用している．</li>
+<li>予め用意されたクラス名を記述するだけでスタイルを適用できるので，ドキュメントを読みながらスタイルを変更してみよう．</li>
+</ul>
+</blockquote>
+<p>画面を確認すると下記のようにナビゲーションが設置された状態となる（一覧ページと作成ページはまだ作成していないので動作しない点に注意）．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-navigation.png" alt="ナビゲーション設置" /></p>
+<h2 id="個別画面todo作成画面と-todo一覧画面の作成"><a class="header" href="#個別画面todo作成画面と-todo一覧画面の作成">個別画面（todo作成画面と todo一覧画面）の作成</a></h2>
+<p>まず，<code>latavel_todo/resources/view</code>の中に<code>todo</code>フォルダを作成する．</p>
+<p>続いて，<code>todo</code>フォルダの中に以下のファイルを作成する．今後必要になる画面のファイルも合わせて作成している．</p>
+<ul>
+<li><code>index.blade.php</code>（todo一覧画面）</li>
+<li><code>create.blade.php</code>（todo作成画面）</li>
+<li><code>show.blade.php</code>（todo詳細画面）</li>
+<li><code>edit.blade.php</code>（todo編集画面）</li>
+</ul>
+<p>ファイルを作成したら<code>create.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Create New Todo') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-8/12 md:w-1/2 lg:w-5/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          @include('common.errors')
+          &lt;form class=&quot;mb-6&quot; action=&quot;{{ route('todo.store') }}&quot; method=&quot;POST&quot;&gt;
+            @csrf
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;todo&quot;&gt;Todo&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;text&quot; name=&quot;todo&quot; id=&quot;todo&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;deadline&quot;&gt;Deadline&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;date&quot; name=&quot;deadline&quot; id=&quot;deadline&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;comment&quot;&gt;Comment&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;text&quot; name=&quot;comment&quot; id=&quot;comment&quot;&gt;
+            &lt;/div&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none&quot;&gt;
+              Create
+            &lt;/button&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>route('todo.store')</code>は<code>TodoController</code>の<code>store()</code>関数にデータを送ることを示している．</li>
+<li><code>@csrf</code>はセキュリティ対策．フォームからデータを送信するときには必ず記述すること．</li>
+</ul>
+</blockquote>
+<p>編集したらブラウザから<code>amazonaws.com/todo/create</code>にアクセスして動作確認．
+下記画面になっていればOK．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-create.png" alt="todo作成画面" /></p>
+<p>続いて，<code>index.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Todo Index') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-10/12 md:w-8/10 lg:w-8/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;table class=&quot;text-center w-full border-collapse&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;todo&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;deadline&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;actions&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              @foreach ($todos as $todo)
+              &lt;tr class=&quot;hover:bg-grey-lighter&quot;&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;
+                  &lt;p&gt;{{$todo-&gt;todo}}&lt;/p&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;{{$todo-&gt;deadline}}&lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light flex justify-center&quot;&gt;
+                  &lt;!-- 更新ボタン --&gt;
+                  &lt;!-- 削除ボタン --&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              @endforeach
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+</code></pre>
+<p>こちらはエラーが発生する．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-index-error.png" alt="一覧画面のエラー" /></p>
+<p>コントローラから<code>$todos</code>という名前でデータを受け取るよう記述しているが，コントローラからデータが送られていないためである．</p>
+<p>とりあえず空のデータを送るように<code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>index()</code>を内容を以下のように編集する．</p>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>view()</code>関数の第 2 引数に渡したいデータを配列で記述する．</li>
+<li>ここでは「<code>todos</code>」という名前で「空の配列」を送っている．</li>
+<li>ビューファイル側では<code>$todos</code>とすることで渡されたデータを使うことができる．</li>
+<li>また，変数などのデータは<code>var_dump()</code>または<code>dd()</code>または<code>ddd()</code>で確認することができる．これらを使ってデータの構造を確認しながら進めると良いだろう．</li>
+</ul>
+</blockquote>
+<pre><code class="language-php">public function index()
+{
+  return view('todo.index', [
+    'todos' =&gt; []
+  ]);
+}
+</code></pre>
+<p>編集したらブラウザから<code>amazonaws.com/todo</code>にアクセスして動作確認．
+下記画面になっていれば OK．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-index-success.png" alt="一覧画面" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データ作成処理の実装"><a class="header" href="#データ作成処理の実装">データ作成処理の実装</a></h1>
+<h2 id="データ作成処理の実装-1"><a class="header" href="#データ作成処理の実装-1">データ作成処理の実装</a></h2>
+<p>必要な画面を揃えたので，作成ページから実際に DB にデータを保存できるようにする．</p>
+<h3 id="modelの編集"><a class="header" href="#modelの編集">Modelの編集</a></h3>
+<p>Modelの役割は「DBとのデータをやり取り」である．ModelにはDBからどのようにデータを取得するか，などの処理を記述する．</p>
+<p>ただし，Modelには予め使用頻度の高い処理（基本的なCRUD）が用意されているため，今回記述するコードはそれほど多くない．</p>
+<p>まず，テーブル対して，Laravel側からデータの作成や編集が行えないカラムを設定する．</p>
+<p>これはクライアントから送信されてくるデータがIDやユーザ権限などの情報を書き換えてしまうリスクを低減させるためである．</p>
+<p><code>laravel_todo/app/Models/Todo.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Todo extends Model
+{
+  use HasFactory;
+
+  // アプリケーション側でcreateなどできない値を記述
+  // ↓以下の処理を記述
+  protected $guarded = [
+    'id',
+    'created_at',
+    'updated_at',
+  ];
+}
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>$guarded</code>はアプリケーション側から変更できないカラムを指定する（ブラックリスト）．</li>
+<li>対して，<code>$fillable</code>はアプリケーション側から変更できるカラムを指定する（ホワイトリスト）．</li>
+<li>どちらを使用しても良いが，どちらかを使用する必要がある．</li>
+</ul>
+</blockquote>
+<h3 id="controllerの編集"><a class="header" href="#controllerの編集">Controllerの編集</a></h3>
+<p>続いて，コントローラに「Modelに対しての命令」を記述する．DBとやり取りする関数はすでに定義されているのでモデル側に新たな記述は必要ない．</p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>store()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function store(Request $request)
+{
+  // バリデーション
+  $validator = Validator::make($request-&gt;all(), [
+    'todo' =&gt; 'required | max:191',
+    'deadline' =&gt; 'required',
+  ]);
+  // バリデーション:エラー
+  if ($validator-&gt;fails()) {
+    return redirect()
+      -&gt;route('todo.create')
+      -&gt;withInput()
+      -&gt;withErrors($validator);
+  }
+  // create()は最初から用意されている関数
+  // 戻り値は挿入されたレコードの情報
+  $result = Todo::create($request-&gt;all());
+  // ルーティング「todo.index」にリクエスト送信（一覧ページに移動）
+  return redirect()-&gt;route('todo.index');
+}
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>create.blade.php</code>から送信されていたデータは<code>$request</code>に入っている．<code>$request-&gt;all()</code>とすることで全部取得することができる．</li>
+<li><code>redirect()-&gt;route('todo.index')</code>は指定したコントローラの関数を動かす．今回は<code>TodoController</code>の<code>index()</code>関数．</li>
+</ul>
+</blockquote>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データ一覧画面の実装"><a class="header" href="#データ一覧画面の実装">データ一覧画面の実装</a></h1>
+<h2 id="データ参照処理の作成"><a class="header" href="#データ参照処理の作成">データ参照処理の作成</a></h2>
+<p>締切が早い順にソートしてデータを参照する処理を作成する．</p>
+<h3 id="modelの処理"><a class="header" href="#modelの処理">Modelの処理</a></h3>
+<p>まず，上記の条件でデータを取得する関数を Modelに作成する．</p>
+<p><code>laravel_todo/app/Models/Todo.php</code>に以下の関数を作成する．</p>
+<pre><code class="language-php">public static function getAllOrderByDeadline()
+{
+  return self::orderBy('deadline', 'asc')-&gt;get();
+}
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>self</code>は Todoモデルのこと．</li>
+<li><code>orderBy()</code>はSQLのものと同じ理解でOK．</li>
+<li>最後の<code>get()</code>がないと実行されないので注意．</li>
+</ul>
+</blockquote>
+<h3 id="controllerを編集"><a class="header" href="#controllerを編集">Controllerを編集</a></h3>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>index()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function index()
+{
+  // モデルに定義した関数を実行する．
+  $todos = Todo::getAllOrderByDeadline();
+  return view('todo.index', [
+    'todos' =&gt; $todos
+  ]);
+}
+</code></pre>
+<p>todo作成画面でデータを入力して送信すると，自動的に一覧画面に切り替わる．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-create-post.png" alt="データ作成" /></p>
+<p>自分が入力したデータが表示されていればOK．何件かデータを入れておこう．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-index-list2.png" alt="データ複数件追加" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データ詳細画面の実装"><a class="header" href="#データ詳細画面の実装">データ詳細画面の実装</a></h1>
+<p>詳細画面はtodoの1件を個別に表示する．</p>
+<h2 id="一覧画面に詳細画面へのリンクを作成"><a class="header" href="#一覧画面に詳細画面へのリンクを作成">一覧画面に詳細画面へのリンクを作成</a></h2>
+<p>各todoの詳細を取得する処理と表示する画面を作成する．</p>
+<p>一覧画面のtodo名をクリックすると詳細画面に移動するようにする．</p>
+<p>クリックするとコントローラの<code>show()</code>関数にリクエストを送るように記述している．</p>
+<p><code>index.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Todo Index') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-10/12 md:w-8/10 lg:w-8/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;table class=&quot;text-center w-full border-collapse&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;todo&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;deadline&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;actions&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              @foreach ($todos as $todo)
+              &lt;tr class=&quot;hover:bg-grey-lighter&quot;&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;
+                  &lt;!-- ↓ここがリンクになるように編集する --&gt;
+                  &lt;a href=&quot;{{ route('todo.show',$todo-&gt;id) }}&quot;&gt;{{$todo-&gt;todo}}&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;{{$todo-&gt;deadline}}&lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light flex justify-center&quot;&gt;
+                  &lt;!-- 更新ボタン --&gt;
+                  &lt;!-- 削除ボタン --&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              @endforeach
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+</code></pre>
+<h2 id="指定した1件のデータを取得する処理を追加"><a class="header" href="#指定した1件のデータを取得する処理を追加">指定した1件のデータを取得する処理を追加</a></h2>
+<p><code>show()</code>関数では，IDを指定して1件のデータを取得したい．</p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>show()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function show($id)
+{
+  $todo = Todo::find($id);
+  return view('todo.show', ['todo' =&gt; $todo]);
+}
+</code></pre>
+<p>ここでは，受け取ったIDの値でテーブルからデータを取り出し，<code>todo</code>という名前で<code>show.blade.php</code>に渡している．</p>
+<h2 id="詳細表示画面の作成"><a class="header" href="#詳細表示画面の作成">詳細表示画面の作成</a></h2>
+<p>詳細画面の<code>show.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Show Todo Detail') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-8/12 md:w-1/2 lg:w-5/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;div class=&quot;mb-6&quot;&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;p class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot;&gt;Todo&lt;/p&gt;
+              &lt;p class=&quot;py-2 px-3 text-grey-darkest&quot; id=&quot;todo&quot;&gt;
+                {{$todo-&gt;todo}}
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;p class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot;&gt;Deadline&lt;/p&gt;
+              &lt;p class=&quot;py-2 px-3 text-grey-darkest&quot; id=&quot;deadline&quot;&gt;
+                {{$todo-&gt;deadline}}
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;p class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot;&gt;Comment&lt;/p&gt;
+              &lt;p class=&quot;py-2 px-3 text-grey-darkest&quot; id=&quot;comment&quot;&gt;
+                {{$todo-&gt;comment}}
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;a href=&quot;{{ route('todo.index') }}&quot; class=&quot;block text-center w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none&quot;&gt;
+              Back
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+</code></pre>
+<p>一覧画面で各todoをクリックし，下記のように詳細画面が表示されればOK．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-show.png" alt="詳細画面" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データ削除処理の実装"><a class="header" href="#データ削除処理の実装">データ削除処理の実装</a></h1>
+<p>一覧画面に削除ボタンを設置し，クリックしたら該当するデータを削除できるようにする．</p>
+<h2 id="一覧画面に削除ボタンを追加"><a class="header" href="#一覧画面に削除ボタンを追加">一覧画面に削除ボタンを追加</a></h2>
+<p><code>index.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Todo Index') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-10/12 md:w-8/10 lg:w-8/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;table class=&quot;text-center w-full border-collapse&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;todo&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;deadline&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;actions&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              @foreach ($todos as $todo)
+              &lt;tr class=&quot;hover:bg-grey-lighter&quot;&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;
+                  &lt;a href=&quot;{{ route('todo.show',$todo-&gt;id) }}&quot;&gt;{{$todo-&gt;todo}}&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;{{$todo-&gt;deadline}}&lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light flex justify-center&quot;&gt;
+                  &lt;!-- 更新ボタン --&gt;
+                  &lt;!-- 削除ボタン --&gt;
+                  &lt;form action=&quot;{{ route('todo.destroy',$todo-&gt;id) }}&quot; method=&quot;POST&quot;&gt;
+                    @method('delete')
+                    @csrf
+                    &lt;button type=&quot;submit&quot; class=&quot;mr-2 ml-2 text-sm bg-black hover:bg-gray-900 hover:shadow-none text-white py-1 px-2 focus:outline-none focus:shadow-outline&quot;&gt;
+                      &lt;svg class=&quot;h-6 w-6 text-gray-500&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;white&quot;&gt;
+                        &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16&quot; /&gt;
+                      &lt;/svg&gt;
+                    &lt;/button&gt;
+                  &lt;/form&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              @endforeach
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li>削除ボタンクリック時には，コントローラの<code>destroy()</code>関数にリクエストが送られる．</li>
+<li>削除の処理を行うには<code>DELETE</code>メソッドでリクエストを送る必要があるが，formからはGETまたはPOSTでしか送れない．</li>
+<li><code>@method('delete')</code>を記述することで，<code>DELETE</code>メソッドで送信できる．</li>
+</ul>
+</blockquote>
+<p>一覧画面を確認し，削除ボタンが表示されていればOK．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-index-delete-button.png" alt="削除ボタン追加" /></p>
+<h2 id="指定したデータを削除する処理の作成"><a class="header" href="#指定したデータを削除する処理の作成">指定したデータを削除する処理の作成</a></h2>
+<p>まずIDで指定したデータを1件抽出し，そのデータを削除する，という流れ．</p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>destroy()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function destroy($id)
+{
+  $result = Todo::find($id)-&gt;delete();
+  return redirect()-&gt;route('todo.index');
+}
+</code></pre>
+<p>動作させて確認する．削除ボタンをクリックし，該当するデータが削除されればOK．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データ更新処理の実装"><a class="header" href="#データ更新処理の実装">データ更新処理の実装</a></h1>
+<p>更新処理は</p>
+<ol>
+<li>一覧画面に編集ボタンを設置．</li>
+<li>編集ボタンをクリックしたら編集画面に移動.</li>
+<li>編集画面でデータを書き換え，送信ボタンクリックでDBのデータを更新する．</li>
+</ol>
+<h2 id="一覧画面に編集ボタンを追加"><a class="header" href="#一覧画面に編集ボタンを追加">一覧画面に編集ボタンを追加</a></h2>
+<p><code>index.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Todo Index') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-10/12 md:w-8/10 lg:w-8/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;table class=&quot;text-center w-full border-collapse&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;todo&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;deadline&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;actions&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              @foreach ($todos as $todo)
+              &lt;tr class=&quot;hover:bg-grey-lighter&quot;&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;
+                  &lt;a href=&quot;{{ route('todo.show',$todo-&gt;id) }}&quot;&gt;{{$todo-&gt;todo}}&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;{{$todo-&gt;deadline}}&lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light flex justify-center&quot;&gt;
+                  &lt;!-- 更新ボタン --&gt;
+                  &lt;form action=&quot;{{ route('todo.edit',$todo-&gt;id) }}&quot; method=&quot;GET&quot;&gt;
+                    @csrf
+                    &lt;button type=&quot;submit&quot; class=&quot;mr-2 ml-2 text-sm bg-black hover:bg-gray-900 hover:shadow-none text-white py-1 px-2 focus:outline-none focus:shadow-outline&quot;&gt;
+                      &lt;svg class=&quot;h-6 w-6 text-gray-500&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;white&quot;&gt;
+                        &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z&quot; /&gt;
+                      &lt;/svg&gt;
+                    &lt;/button&gt;
+                  &lt;/form&gt;
+                  &lt;!-- 削除ボタン --&gt;
+                  &lt;form action=&quot;{{ route('todo.destroy',$todo-&gt;id) }}&quot; method=&quot;POST&quot;&gt;
+                    @method('delete')
+                    @csrf
+                    &lt;button type=&quot;submit&quot; class=&quot;mr-2 ml-2 text-sm bg-black hover:bg-gray-900 hover:shadow-none text-white py-1 px-2 focus:outline-none focus:shadow-outline&quot;&gt;
+                      &lt;svg class=&quot;h-6 w-6 text-gray-500&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;white&quot;&gt;
+                        &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16&quot; /&gt;
+                      &lt;/svg&gt;
+                    &lt;/button&gt;
+                  &lt;/form&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              @endforeach
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+</code></pre>
+<p>一覧画面に編集ボタンが表示されていればOK．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-index-edit-button.png" alt="編集ボタン追加" /></p>
+<h2 id="更新画面に移動する処理の作成"><a class="header" href="#更新画面に移動する処理の作成">更新画面に移動する処理の作成</a></h2>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>edit()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function edit($id)
+{
+  $todo = Todo::find($id);
+  return view('todo.edit', ['todo' =&gt; $todo]);
+}
+</code></pre>
+<p>やっていることは<code>create()</code>関数と同様．</p>
+<h2 id="更新画面の作成"><a class="header" href="#更新画面の作成">更新画面の作成</a></h2>
+<p><code>edit.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Edit Todo') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-8/12 md:w-1/2 lg:w-5/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          @include('common.errors')
+          &lt;form class=&quot;mb-6&quot; action=&quot;{{ route('todo.update',$todo-&gt;id) }}&quot; method=&quot;POST&quot;&gt;
+            @method('put')
+            @csrf
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;todo&quot;&gt;Todo&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;text&quot; name=&quot;todo&quot; id=&quot;todo&quot; value=&quot;{{$todo-&gt;todo}}&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;deadline&quot;&gt;Deadline&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;date&quot; name=&quot;deadline&quot; id=&quot;deadline&quot; value=&quot;{{$todo-&gt;deadline}}&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;comment&quot;&gt;Comment&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;text&quot; name=&quot;comment&quot; id=&quot;comment&quot; value=&quot;{{$todo-&gt;comment}}&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex justify-evenly&quot;&gt;
+              &lt;a href=&quot;{{ route('todo.index') }}&quot; class=&quot;block text-center w-5/12 py-3 mt-6 font-medium tracking-widest text-black uppercase bg-gray-100 shadow-sm focus:outline-none hover:bg-gray-200 hover:shadow-none&quot;&gt;
+                Back
+              &lt;/a&gt;
+              &lt;button type=&quot;submit&quot; class=&quot;w-5/12 py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none&quot;&gt;
+                Update
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+</code></pre>
+<p>一覧画面の更新ボタンをクリックし，現在のデータが表示されていればOK．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-edit.png" alt="編集画面" /></p>
+<h2 id="指定したデータを更新する処理の作成"><a class="header" href="#指定したデータを更新する処理の作成">指定したデータを更新する処理の作成</a></h2>
+<p>編集画面でデータを書き換え，コントローラの<code>update()</code>関数にデータを送信し，DBのデータを更新する．</p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>update()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function update(Request $request, $id)
+{
+  //バリデーション
+  $validator = Validator::make($request-&gt;all(), [
+    'todo' =&gt; 'required | max:191',
+    'deadline' =&gt; 'required',
+  ]);
+  //バリデーション:エラー
+  if ($validator-&gt;fails()) {
+    return redirect()
+      -&gt;route('todo.edit', $id)
+      -&gt;withInput()
+      -&gt;withErrors($validator);
+  }
+  //データ更新処理
+  // updateは更新する情報がなくても更新が走る（updated_atが更新される）
+  $result = Todo::find($id)-&gt;update($request-&gt;all());
+  // fill()save()は更新する情報がない場合は更新が走らない（updated_atが更新されない）
+  // $redult = Todo::find($id)-&gt;fill($request-&gt;all())-&gt;save();
+  return redirect()-&gt;route('todo.index');
+}
+</code></pre>
+<p>編集画面で書き換えたデータに更新されればOK．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-index-updated.png" alt="データ更新結果" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ユーザ情報の利用"><a class="header" href="#ユーザ情報の利用">ユーザ情報の利用</a></h1>
+<p>はじめのほうで，ユーザ認証を行うbreezeライブラリをインストールしたため，これを利用してユーザ管理を行う．</p>
+<p>まず，認証ユーザのみがアプリケーションの機能を利用できるように処理を変更する．</p>
+<p>続いて，データ作成時にユーザ情報を含めることで，ログインユーザが作成したデータのみを扱えるように処理を変更する．</p>
+<h2 id="ログインしていないユーザはアプリケーションにアクセスできないようにする"><a class="header" href="#ログインしていないユーザはアプリケーションにアクセスできないようにする">ログインしていないユーザはアプリケーションにアクセスできないようにする．</a></h2>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use Validator;
+use App\Models\Todo;
+// ↓追加
+use Auth;
+
+class TodoController extends Controller
+{
+  // ↓関数を作成
+  public function __construct()
+  {
+    $this-&gt;middleware(['auth']);
+  }
+
+  // ...省略
+
+}
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li>ユーザの認証情報を使用するため，<code>use Auth;</code>を記述している．</li>
+<li><code>__construct()</code>関数は，その他の関数が実行される場合にその前に実行される．</li>
+<li><code>middleware(['auth'])</code>はログイン状況を確認して，ログインしていない状態ならログインページに戻す処理を実行する．</li>
+</ul>
+</blockquote>
+<p>一旦ログアウトしてURL直打ちするとログイン画面に戻される状態になっていればOK．</p>
+<h2 id="todoテーブルにユーザidカラムを追加する"><a class="header" href="#todoテーブルにユーザidカラムを追加する">todoテーブルにユーザIDカラムを追加する</a></h2>
+<p>カラムの変更はマイグレーションファイルから行う．</p>
+<p><code>laravel_todo/database/migration/2020_12_31_033638_create_todos_table.php</code>を開く．
+下記にように編集する．</p>
+<pre><code class="language-php">&lt;?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateTodosTable extends Migration
+{
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create('todos', function (Blueprint $table) {
+      $table-&gt;id();
+      // ↓`user_id`を追加
+      $table-&gt;integer('user_id');
+      $table-&gt;string('todo');
+      $table-&gt;date('deadline');
+      $table-&gt;text('comment')-&gt;nullable();
+      $table-&gt;timestamps();
+    });
+  }
+
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists('todos');
+  }
+}
+</code></pre>
+<p>以下のコマンドを実行する．<code>:fresh</code>をつけることで，既存のテーブルを一旦消去して再度マイグレーションを実行する．</p>
+<pre><code class="language-bash">$ php artisan migrate:fresh
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Dropped all tables successfully.
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (33.21ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (25.65ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (28.30ms)
+Migrating: 2020_12_31_033638_create_todos_table
+Migrated:  2020_12_31_033638_create_todos_table (17.26ms)
+</code></pre>
+<p>うまくいったら，mysqlにログインしてテーブルを確認する．</p>
+<pre><code class="language-bash">$ mysql -u root -p
+
+mysql&gt; use laravel_todo;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql&gt; show tables;
++------------------------+
+| Tables_in_laravel_todo |
++------------------------+
+| failed_jobs            |
+| migrations             |
+| password_resets        |
+| todos                  |
+| users                  |
++------------------------+
+5 rows in set (0.00 sec)
+
+mysql&gt; desc todos;
++------------+---------------------+------+-----+---------+----------------+
+| Field      | Type                | Null | Key | Default | Extra          |
++------------+---------------------+------+-----+---------+----------------+
+| id         | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| user_id    | int(11)             | NO   |     | NULL    |                |
+| todo       | varchar(191)        | NO   |     | NULL    |                |
+| deadline   | date                | NO   |     | NULL    |                |
+| comment    | text                | YES  |     | NULL    |                |
+| created_at | timestamp           | YES  |     | NULL    |                |
+| updated_at | timestamp           | YES  |     | NULL    |                |
++------------+---------------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
+mysql&gt; exit;
+Bye
+
+</code></pre>
+<p>user_idカラムが追加されていればOK．</p>
+<p>ユーザテーブルは初期化されているので再度registerすること．</p>
+<h2 id="データ追加時にuser_idを追加"><a class="header" href="#データ追加時にuser_idを追加">データ追加時にuser_idを追加</a></h2>
+<p>todoのデータを作成する際に，「誰が作成したのか」がわかるように，データにログインユーザのIDを追加する．</p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>store()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function store(Request $request)
+{
+  // バリデーション
+  $validator = Validator::make($request-&gt;all(), [
+    'todo' =&gt; 'required | max:255',
+    'deadline' =&gt; 'required',
+  ]);
+  // バリデーション:エラー
+  if ($validator-&gt;fails()) {
+    return redirect()
+      -&gt;route('todo.create')
+      -&gt;withInput()
+      -&gt;withErrors($validator);
+  }
+  // フォームから送信されてきたデータとユーザIDをマージする
+  $data = $request-&gt;merge(['user_id' =&gt; Auth::user()-&gt;id])-&gt;all();
+  // create()は最初から用意されている関数
+  // 戻り値は挿入されたレコードの情報
+  $result = Todo::create($data);
+  // ルーティング「todo.index」にリクエスト送信（一覧ページに移動）
+  return redirect()-&gt;route('todo.index');
+}
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>$request-&gt;merge()</code>でユーザIDを追加している．</li>
+<li><code>Auth::user()-&gt;id</code>で現在ログインしているユーザのIDを取得することができる．</li>
+<li><code>Auth::user()</code>には他にもデータが入っているので，<code>dd()</code>などで確認してみると良いだろう．</li>
+</ul>
+</blockquote>
+<h2 id="一覧画面にログインユーザが登録したデータのみを表示する"><a class="header" href="#一覧画面にログインユーザが登録したデータのみを表示する">一覧画面にログインユーザが登録したデータのみを表示する</a></h2>
+<p>ログインしているユーザのIDでフィルタリングして締切が早い順にソートしてデータを参照する処理を作成する．</p>
+<p><code>laravel_todo/app/Models/Todo.php</code>に以下のように編集する．</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+// ↓1行追加
+use Auth;
+
+class Todo extends Model
+{
+  use HasFactory;
+
+  protected $guarded = [
+    'id',
+    'created_at',
+    'updated_at',
+  ];
+
+  public static function getAllOrderByDeadline()
+  {
+    $todos = self::orderBy('deadline', 'asc')
+      -&gt;get();
+    return $todos;
+  }
+
+  // ↓新しい関数を追加
+  public static function getMyAllOrderByDeadline()
+  {
+    $todos = self::where('user_id', Auth::user()-&gt;id)
+      -&gt;orderBy('deadline', 'asc')
+      -&gt;get();
+    return $todos;
+  }
+}
+</code></pre>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>index()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function index()
+{
+  // モデルに定義した関数を実行する．
+  $todos = Todo::getMyAllOrderByDeadline();
+  return view('todo.index', [
+    'todos' =&gt; $todos
+  ]);
+}
+</code></pre>
+<p>動作させて検証する．異なるユーザでログインし，個別にデータが表示されることを確認すると良いだろう．</p>
+<p><img src="laravel/laravel02_aws/../img/20210104-index-auth.png" alt="認証済み一覧画面" /></p>
+<p>ここまでで基本的なCRUD処理を使ったtodoリストのアプリケーションが完成！</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="あとがき"><a class="header" href="#あとがき">あとがき</a></h1>
+<p>フレームワークに挑戦する場合，初見で理解することは不可能．</p>
+<p>とりあえず今回のアプリケーションを10回程度実装してみよう．</p>
+<blockquote>
+<p>次のステップ</p>
+<ul>
+<li>todo リストを元に別の項目でアプリケーションをつくってみよう（掲示板，ブックマークなど）．</li>
+<li>ローカル環境で開発環境をつくってみよう（vagrant，dockerなど）．</li>
+<li>より多機能な認証ライブラリ（Jetstream）を使ってソーシャルログインなど実装してみよう．</li>
+</ul>
+</blockquote>
+<p>今回はここまで( `･ω･)b</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="docker編環境構築とlaravel準備"><a class="header" href="#docker編環境構築とlaravel準備">【Docker編】環境構築とLaravel準備</a></h1>
+<p>Laravelで開発をするためには，開発環境を用意する必要がある．一人で開発するときだけでなく，複数人で開発する際には「同じ開発環境」を揃えることが大切である．</p>
+<p>更に，フレームワークやライブラリを多用する場合，個々のPC環境によって細かいバージョンの差異や動作具合に影響が生じることがある．</p>
+<p>主なLaravelの開発環境には以下のようなものがある．</p>
+<ul>
+<li>ローカル環境（XAMPPなど）</li>
+<li>ローカル上の仮想マシン（vagrantなど）</li>
+<li>仮想コンテナ（Dockerなど）</li>
+<li>クラウド上の仮想マシン（AWS Cloud9など）</li>
+</ul>
+<p>今回はLaravel公式が準備する機能を用い，仮想マシン上で開発を行う．</p>
+<h2 id="多用するコマンドまとめ"><a class="header" href="#多用するコマンドまとめ">多用するコマンドまとめ</a></h2>
+<h3 id="仮想コンテナを立ち上げる"><a class="header" href="#仮想コンテナを立ち上げる">仮想コンテナを立ち上げる</a></h3>
+<pre><code class="language-bash">$ ./vendor/bin/sail up -d
+</code></pre>
+<h3 id="仮想コンテナを終了させる"><a class="header" href="#仮想コンテナを終了させる">仮想コンテナを終了させる</a></h3>
+<pre><code class="language-bash">$ ./vendor/bin/sail down
+</code></pre>
+<h3 id="laravelコンテナへログインする"><a class="header" href="#laravelコンテナへログインする">Laravelコンテナへログインする</a></h3>
+<pre><code class="language-bash">$ docker-compose exec laravel.test bash
+</code></pre>
+<h3 id="mysqlコンテナへログインする"><a class="header" href="#mysqlコンテナへログインする">MySQLコンテナへログインする</a></h3>
+<pre><code class="language-bash">$ docker-compose exec mysql bash
+</code></pre>
+<h3 id="コンテナからログアウトする"><a class="header" href="#コンテナからログアウトする">コンテナからログアウトする</a></h3>
+<pre><code class="language-bash">$ exit
+</code></pre>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="laravelプロジェクト作成-1"><a class="header" href="#laravelプロジェクト作成-1">Laravelプロジェクト作成</a></h1>
+<p>下記コマンドで一撃．<code>laravel_todo</code>部分がプロジェクト名となる．</p>
+<pre><code class="language-bash">$ curl -s https://laravel.build/laravel_todo | bash
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash"> _                               _
+| |                             | |
+| |     __ _ _ __ __ ___   _____| |
+| |    / _` | '__/ _` \ \ / / _ \ |
+| |___| (_| | | | (_| |\ V /  __/ |
+|______\__,_|_|  \__,_| \_/ \___|_|
+
+Warning: TTY mode requires /dev/tty to be read/writable.
+    Creating a &quot;laravel/laravel&quot; project at &quot;./laravel_todo&quot;
+    Installing laravel/laravel (v8.5.20)
+      - Downloading laravel/laravel (v8.5.20)
+      - Installing laravel/laravel (v8.5.20): Extracting archive
+...
+</code></pre>
+<p>途中，Laravel側でいろいろ実行するためPCのログインパスワードを求められるので入力する．</p>
+<pre><code class="language-bash">...
+Please provide your password so we can make some final adjustments to your application's permissions.
+
+[sudo] password for taroosg:
+
+Thank you! We hope you build something incredible. Dive in with: cd laravel_todo &amp;&amp; ./vendor/bin/sail up
+
+</code></pre>
+<h2 id="権限の変更"><a class="header" href="#権限の変更">権限の変更</a></h2>
+<p>この方法でプロジェクトを作成するとエディタで操作する場合に権限で引っかかる場合があるので権限を変更する．</p>
+<pre><code class="language-bash">$ sudo chmod -R 777 laravel_todo
+</code></pre>
+<h2 id="起動"><a class="header" href="#起動">起動</a></h2>
+<p>早速仮想コンテナを立ち上げる．</p>
+<pre><code class="language-bash">$ cd laravel_todo
+$ ./vendor/bin/sail up -d
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Creating network &quot;laravel_todo_sail&quot; with driver &quot;bridge&quot;
+Creating volume &quot;laravel_todo_sailmysql&quot; with local driver
+Creating volume &quot;laravel_todo_sailredis&quot; with local driver
+Creating volume &quot;laravel_todo_sailmeilisearch&quot; with local driver
+Creating laravel_todo_mailhog_1     ... done
+Creating laravel_todo_meilisearch_1 ... done
+Creating laravel_todo_redis_1       ... done
+Creating laravel_todo_selenium_1    ... done
+Creating laravel_todo_mysql_1       ... done
+Creating laravel_todo_laravel.test_1 ... done
+</code></pre>
+<h2 id="動作確認"><a class="header" href="#動作確認">動作確認</a></h2>
+<p>ブラウザでlocalhostにアクセスし，下記画面が表示されればOK．</p>
+<p><img src="laravel/laravel01_docker/../img/20210104-laravel-firstview.png" alt="トップ画面" /></p>
+<p>仮想マシン（コンテナ）を終了させる場合は以下のコマンドを実行する．</p>
+<pre><code class="language-bash">$ ./vendor/bin/sail down
+</code></pre>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ライブラリ準備-2"><a class="header" href="#ライブラリ準備-2">ライブラリ準備</a></h1>
+<h3 id="ライブラリ準備-3"><a class="header" href="#ライブラリ準備-3">ライブラリ準備</a></h3>
+<p>作成するアプリケーションでライブラリを使用する場合はコマンドでインストールを行う．今回は認証を実装するための<code>Laravel Breeze</code>をインストールする．</p>
+<p>Laravelのプロジェクト内でコマンドを実行する場合には，下記コマンドで仮想コンテナにログインする必要がある．</p>
+<pre><code class="language-bash">$ docker-compose exec laravel.test bash
+root@81f8517c4e7f:/var/www/html#
+</code></pre>
+<p>仮想コンテナから出る場合には下記のコマンドを実行する．</p>
+<pre><code class="language-bash">root@81f8517c4e7f:/var/www/html# exit
+exit
+$
+</code></pre>
+<p><strong>以降のコマンドは仮想コンテナにログインした状態（ターミナルが<code>/var/www/html# </code>になっている状態）で行うこと</strong></p>
+<p>下記コマンドを実行し，必要なファイルをダウンロードする．</p>
+<pre><code class="language-bash">$ composer require laravel/breeze --dev
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">...
+Discovered Package: nesbot/carbon
+Discovered Package: nunomaduro/collision
+Package manifest generated successfully.
+73 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+</code></pre>
+<p>下記コマンドでインストールする．</p>
+<pre><code class="language-bash">$ php artisan breeze:install
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Breeze scaffolding installed successfully.
+Please execute the &quot;npm install &amp;&amp; npm run dev&quot; command to build your assets.
+</code></pre>
+<p>下記コマンドを実行し，その他必要なパッケージをインストールしてビルドする（ここでNode.jsが動く）．</p>
+<pre><code class="language-bash">$ npm install &amp;&amp; npm run dev
+</code></pre>
+<p>実行結果（やや時間がかかる）</p>
+<pre><code class="language-bash">✔ Compiled Successfully in 4720ms
+┌───────────────────────────────────────────────────────────────────┬──────────┐
+│                                                              File │ Size     │
+├───────────────────────────────────────────────────────────────────┼──────────┤
+│                                                        /js/app.js │ 673 KiB  │
+│                                                       css/app.css │ 3.82 MiB │
+└───────────────────────────────────────────────────────────────────┴──────────┘
+webpack compiled successfully
+</code></pre>
+<p>ブラウザでlocalhostにアクセスし，動作を確認する．</p>
+<p>以下の画面が表示されればOK（右上に<code>Login</code>と<code>register</code>が表示される）．</p>
+<p><img src="laravel/laravel01_docker/../img/20210104-breeze-installed.png" alt="breezeインストール確認" /></p>
+<p>右上の<code>register</code>をクリックするとユーザ登録画面に移動するが，まだこの段階ではユーザ登録機能は動作しない．ユーザ登録画面が表示されればOK．</p>
+<p><img src="laravel/laravel01_docker/../img/20210104-register.png" alt="register画面" /></p>
+<p>ここまででライブラリの準備は完了．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データベース準備-1"><a class="header" href="#データベース準備-1">データベース準備</a></h1>
+<h2 id="mysqlの準備-1"><a class="header" href="#mysqlの準備-1">MySQLの準備</a></h2>
+<p>今回のtodoリストアプリケーションでは，DBとしてMySQLを使用する．</p>
+<p>すでにMySQL自体は動作する状態になっているが，Laravelから扱うにはいくつかの設定が必要となる．下記手順を実行し，MySQLにログインする．</p>
+<p><strong>コンテナへログインしている場合は一旦<code>exit</code>で通常のターミナルに戻って実行すること</strong></p>
+<h2 id="db用のコンテナへログイン"><a class="header" href="#db用のコンテナへログイン">DB用のコンテナへログイン</a></h2>
+<pre><code class="language-bash">$ docker-compose exec mysql bash
+root@d984f6614597:/#
+</code></pre>
+<h2 id="mysqlへログイン"><a class="header" href="#mysqlへログイン">MySQLへログイン</a></h2>
+<p>ユーザ名<code>sail</code>，パスワード<code>password</code>でログインできる．</p>
+<p>パスワードを求められるので「<code>password</code>」を入力して Enter（パスワードは画面上に表示されないので注意）．</p>
+<pre><code class="language-bash">root@d984f6614597:/# mysql -u sail -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 29
+Server version: 8.0.25 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt;
+</code></pre>
+<h2 id="db状況の確認"><a class="header" href="#db状況の確認">DB状況の確認</a></h2>
+<p>すでに今回のアプリケーションで使用するデータベースを作成されている．データベース名は <code>laravel_todo</code>（プロジェクト名を同じ）．</p>
+<p>下記コマンドを実行してデータベースの一覧を表示する．</p>
+<pre><code class="language-bash">mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| laravel_todo       |
++--------------------+
+2 rows in set (0.03 sec)
+</code></pre>
+<p>確認できたらログアウトする．</p>
+<pre><code class="language-bash">mysql&gt; exit;
+Bye
+</code></pre>
+<h2 id="laravelからdbに接続するための準備-1"><a class="header" href="#laravelからdbに接続するための準備-1">LaravelからDBに接続するための準備</a></h2>
+<p>続いて，LaravelからMySQLにアクセスするための設定を行う．今回はプロジェクト作成の時点で設定されているため項目の確認のみ行う．</p>
+<p>エディタから<code>.env</code>ファイルを開く．<code>.env</code>ファイルは<code>laravel_todo</code>ディレクトリの直下に配置されている．</p>
+<pre><code class="language-env">DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel_todo
+DB_USERNAME=sail
+DB_PASSWORD=password
+</code></pre>
+<p>それぞれ下記の意味となっている．デプロイする場合などはサービス提供者側からそれぞれ情報が提供されるため，必要に応じて編集する．</p>
+<table><thead><tr><th>項目</th><th>意味</th></tr></thead><tbody>
+<tr><td>DB_CONNECTION</td><td>DBの種類</td></tr>
+<tr><td>DB_HOST</td><td>DBのホスト名</td></tr>
+<tr><td>DB_PORT</td><td>DBのポート</td></tr>
+<tr><td>DB_DATABASE</td><td>DB名</td></tr>
+<tr><td>DB_USERNAME</td><td>DBにログインするときのユーザ名</td></tr>
+<tr><td>DB_PASSWORD</td><td>DBにログインするときのパスワード</td></tr>
+</tbody></table>
+<p>もし<code>.env</code>ファイルを更新する場合はキャッシュをクリアする．</p>
+<blockquote>
+<p>設定ファイルはサーバ起動時にキャッシュに保存されるため，変更した場合は「キャッシュをクリアする」「コンテナを立ち上げ直す」のどちらかが必要になる．</p>
+<p>キャッシュクリアのコマンドを実行する場合はLaravelの仮想コンテナにログインした状態で行うこと．</p>
+</blockquote>
+<pre><code class="language-bash">$ php artisan config:cache
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Configuration cache cleared!
+Configuration cached successfully!
+</code></pre>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="docker編todoアプリケーションの実装"><a class="header" href="#docker編todoアプリケーションの実装">【Docker編】todoアプリケーションの実装</a></h1>
+<p>基本的なCRUD処理を実装する．</p>
+<p>Laravelでは，テーブル設計，データ操作，画面表示などアプリケーションの流れを一貫して実装することができ，開発を支援するライブラリやコマンドも豊富に用意されている．</p>
+<p>todoアプリケーションの実装を通して，これらの機能を体験する．</p>
+<h2 id="多用するコマンドまとめ-1"><a class="header" href="#多用するコマンドまとめ-1">多用するコマンドまとめ</a></h2>
+<h3 id="仮想コンテナを立ち上げる-1"><a class="header" href="#仮想コンテナを立ち上げる-1">仮想コンテナを立ち上げる</a></h3>
+<pre><code class="language-bash">$ ./vendor/bin/sail up -d
+</code></pre>
+<h3 id="仮想コンテナを終了させる-1"><a class="header" href="#仮想コンテナを終了させる-1">仮想コンテナを終了させる</a></h3>
+<pre><code class="language-bash">$ ./vendor/bin/sail down
+</code></pre>
+<h3 id="laravelコンテナへログインする-1"><a class="header" href="#laravelコンテナへログインする-1">Laravelコンテナへログインする</a></h3>
+<pre><code class="language-bash">$ docker-compose exec laravel.test bash
+</code></pre>
+<h3 id="mysqlコンテナへログインする-1"><a class="header" href="#mysqlコンテナへログインする-1">MySQLコンテナへログインする</a></h3>
+<pre><code class="language-bash">$ docker-compose exec mysql bash
+</code></pre>
+<h3 id="コンテナからログアウトする-1"><a class="header" href="#コンテナからログアウトする-1">コンテナからログアウトする</a></h3>
+<pre><code class="language-bash">$ exit
+</code></pre>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="マイグレーションによるテーブル設計-1"><a class="header" href="#マイグレーションによるテーブル設計-1">マイグレーションによるテーブル設計</a></h1>
+<p>プロダクトの実装を進める上で，Laravelコンテナ内やDBコンテナ内など「実行場所」を確認すること．</p>
+<h2 id="テーブル設計マイグレーション-1"><a class="header" href="#テーブル設計マイグレーション-1">テーブル設計（マイグレーション）</a></h2>
+<blockquote>
+<p><strong>📦 Laravelコンテナ内の操作</strong></p>
+<pre><code class="language-bash">$ docker-compose exec laravel.test bash
+root@8544d96d2334:/var/www/html#
+</code></pre>
+</blockquote>
+<p>今回のアプリケーションはtodoリストなので「todos」テーブルを作成する．</p>
+<p>Laravelでは「マイグレーション」という仕組みを使用してテーブルの管理を行う．また，テーブル内のデータは「Model」を使用して操作する．Laravelでは<code>Eroquent Model</code>と呼ばれるORMを使用する．</p>
+<blockquote>
+<p>【解説 / マイグレーション】</p>
+<ul>
+<li>マイグレーションとは「マイグレーションファイル」を用いてテーブルを管理する仕組み．</li>
+<li>「マイグレーションファイル」にテーブル名やカラム名を記述し，指定されたコマンドを実行することで設定したテーブルが生成される．</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>【解説 / Eloquent Model】</p>
+<ul>
+<li>Eloquent ModelはLaravel標準のORM（object-relational mapper）である．</li>
+<li>ORMとは，DBのレコードをオブジェクトとして直感的に扱えるようにしたもので，SQLを意識せずにプログラムで処理を記述することができる．</li>
+<li>Eloquent Modelは定義された「Model」を用いることで簡単にDBへのデータ保存・取得などを行える．</li>
+<li>1つのモデルが1つのテーブルに対応する．例えば，<code>todos</code>テーブルに対して<code>Todo</code>のようにモデルを定義すると自動的に対応する．モデル内に明示的に対応を記述することもできる．</li>
+<li>テーブルに対してデータ操作を行う場合，対応するモデルに対して処理を実行することでDB操作を行うことができる．</li>
+</ul>
+</blockquote>
+<p>Modelとマイグレーションファイルは一度に両方とも作成することができる．</p>
+<p>下記コマンドはModelを作成するコマンドだが（<code>Todo</code>がモデル名），<code>-m</code>をつけることでマイグレーションファイルも同時に作成できる．この手法を用いることで，Model名とマイグレーションファイル内のテーブル名が自動的に対応する．</p>
+<p>早速実行．</p>
+<pre><code class="language-bash">$ php artisan make:model Todo -m
+</code></pre>
+<p>実行結果（日付時刻は毎回変わる）</p>
+<pre><code class="language-bash">Model created successfully.
+Created Migration: 2020_12_31_033638_create_todos_table
+</code></pre>
+<p><code>laravel_todo/database/migration/2020_12_31_033638_create_todos_table.php</code>を開く．これがマイグレーションファイルである．</p>
+<p>カラムを追加するため，下記にように編集する．今回は<code>todo</code>，<code>deadline</code>，<code>comment</code>の3カラムを追加する．</p>
+<p>カラムを追加するときはデータ型も設定する．<code>todo</code>は文字列（<code>string</code>），<code>deadline</code>は日付（<code>date</code>），<code>comment</code>はテキスト（<code>text</code>）を設定している．</p>
+<p><code>id</code>ははじめから用意されているので設定不要．</p>
+<blockquote>
+<p>【tips】</p>
+<ul>
+<li><code>nullable()</code>を記述することで，入力必須でなくすることができる．他に<code>unique()</code>で重複を禁止することもできる．</li>
+<li><code>timestamps()</code>は<code>created_at</code>カラムと<code>updated_at</code>カラムを自動的に設定してくれる．</li>
+</ul>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateTodosTable extends Migration
+{
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create('todos', function (Blueprint $table) {
+      $table-&gt;id();
+      // ↓追加
+      $table-&gt;string('todo');
+      $table-&gt;date('deadline');
+      $table-&gt;text('comment')-&gt;nullable();
+      // ↑ここまで
+      $table-&gt;timestamps();
+    });
+  }
+
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists('todos');
+  }
+}
+</code></pre>
+<h2 id="文字列最大長の変更"><a class="header" href="#文字列最大長の変更">文字列最大長の変更</a></h2>
+<p>これでテーブルの設計は完了だが，MySQLのバージョンによってはエラーが発生するため，次の設定を行う．</p>
+<p><code>/laravel_todo/app/Providers/AppServiceProvider.php</code>の内容を以下のように編集する．<code>string</code>型の最大長を191に変更する．</p>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li>この設定が必要かどうかはMySQLのバージョンによる．MySQLのバージョンが<code>5.7.7</code>以下の場合は必要となる．</li>
+<li>Laravelのマイグレーションでは文字列の最大長が<code>255</code>として実行するが，MySQL5.7.7以下では最大長が<code>191</code>となっているためである．</li>
+</ul>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;  // 追記
+
+class AppServiceProvider extends ServiceProvider
+{
+  /**
+   * Register any application services.
+   *
+   * @return void
+   */
+  public function register()
+  {
+    //
+  }
+
+  /**
+   * Bootstrap any application services.
+   *
+   * @return void
+   */
+  public function boot()
+  {
+    Schema::defaultStringLength(191); // 追記
+  }
+}
+</code></pre>
+<h2 id="マイグレーション実行"><a class="header" href="#マイグレーション実行">マイグレーション実行</a></h2>
+<blockquote>
+<p>📦 <strong>Laravelコンテナ内の操作</strong></p>
+<pre><code class="language-bash">$ docker-compose exec laravel.test bash
+root@8544d96d2334:/var/www/html#
+</code></pre>
+</blockquote>
+<p>マイグレーションを実行するとテーブルが作成される．以下のコマンドを実行する．</p>
+<pre><code class="language-bash">$ php artisan migrate
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (31.23ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (29.71ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (30.85ms)
+Migrating: 2020_12_31_033638_create_todos_table
+Migrated:  2020_12_31_033638_create_todos_table (14.63ms)
+</code></pre>
+<p>エラーになる場合はマイグレーションファイルの内容が間違っていることが多い．修正して以下のコマンドを実行する．</p>
+<pre><code class="language-bash">$ php artisan migrate:fresh
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>:fresh</code>をつけることで，存在しているテーブルを一旦削除し，再度マイグレーションを実行することができる．</li>
+<li>マイグレーションに失敗した場合はエラーが発生するまでに実行された部分はテーブルが作成される．しかし，マイグレーション実行時に，すでに同名のテーブルが存在している場合はエラーになるため，既存テーブルを削除する必要がある．</li>
+</ul>
+</blockquote>
+<h2 id="テーブル確認"><a class="header" href="#テーブル確認">テーブル確認</a></h2>
+<blockquote>
+<p>📦 <strong>MySQLコンテナ内の操作</strong></p>
+<pre><code class="language-bash">$ docker-compose exec mysql bash
+root@d984f6614597:/#
+</code></pre>
+</blockquote>
+<p>うまくいったら，mysqlにログインしてテーブルを確認する．パスワードは<code>password</code>．</p>
+<pre><code class="language-bash">$ mysql -u sail -p
+
+mysql&gt; use laravel_todo;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+
+mysql&gt; show tables;
++------------------------+
+| Tables_in_laravel_todo |
++------------------------+
+| failed_jobs            |
+| migrations             |
+| password_resets        |
+| todos                  |
+| users                  |
++------------------------+
+5 rows in set (0.00 sec)
+
+mysql&gt; desc todos;
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| id         | bigint unsigned | NO   | PRI | NULL    | auto_increment |
+| todo       | varchar(191)    | NO   |     | NULL    |                |
+| deadline   | date            | NO   |     | NULL    |                |
+| comment    | text            | YES  |     | NULL    |                |
+| created_at | timestamp       | YES  |     | NULL    |                |
+| updated_at | timestamp       | YES  |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+6 rows in set (0.02 sec)
+
+mysql&gt; exit;
+Bye
+</code></pre>
+<p>この段階で，ユーザテーブルなどの認証に使用するテーブルも用意された状態となる．</p>
+<p>ブラウザのLaravel画面右上<code>register</code>から適当にユーザを登録しておこう．</p>
+<blockquote>
+<p>【tips】</p>
+<p><code>Email</code>は<code>example.com</code>を使用する．これはテスト用に用意されているドメインであり，誰かのメールアドレスを使用してしまうリスクを回避できる．</p>
+</blockquote>
+<p>ユーザ登録が完了すると，下記の画面が表示される．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-register-success.png" alt="ユーザ登録完了" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ルーティングとコントローラ-1"><a class="header" href="#ルーティングとコントローラ-1">ルーティングとコントローラ</a></h1>
+<p>Laravelでは，クライアントからリクエストされたURLに対して，どの関数を実行するかを決める．この対応を決定するのが「ルーティング」であり，実際に実行される関数を記述するのが「コントローラ」である．</p>
+<h2 id="ルーティングとコントローラの作成-1"><a class="header" href="#ルーティングとコントローラの作成-1">ルーティングとコントローラの作成</a></h2>
+<blockquote>
+<p>📦 <strong>Laravelコンテナ内の操作</strong></p>
+<pre><code class="language-bash">$ docker-compose exec laravel.test bash
+root@8544d96d2334:/var/www/html#
+</code></pre>
+</blockquote>
+<p>コントローラとルーティングを作成する．今回のコントローラ名は<code>TodoController</code>とする．</p>
+<p><code>--resource</code>をつけることで，よく使用する処理（代表的なCRUD処理）を一括して作成することができる．</p>
+<p>下記コマンドを実行する．</p>
+<pre><code class="language-bash">$ php artisan make:controller TodoController --resource
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Controller created successfully.
+</code></pre>
+<p>これでコントローラファイルが作成された．続いてルーティングを作成する．</p>
+<p><strong>ルーティングファイルは<code>laravel_todo/routes</code>以下に配置される．</strong></p>
+<p><code>/laravel_todo/routes/web.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;?php
+
+use Illuminate\Support\Facades\Route;
+// 下記1行を追記
+use App\Http\Controllers\TodoController;
+
+Route::get('/', function () {
+  return view('welcome');
+});
+
+// 下記1行を追記
+Route::resource('todo', TodoController::class);
+
+Route::get('/dashboard', function () {
+  return view('dashboard');
+})-&gt;middleware(['auth'])-&gt;name('dashboard');
+
+require __DIR__ . '/auth.php';
+
+</code></pre>
+<p>ルーティングの一覧は下記で確認できる．</p>
+<pre><code class="language-bash">$ php artisan route:list
+</code></pre>
+<p>実行結果（ユーザ操作などのルーティングは省略）</p>
+<blockquote>
+<p>【解説】</p>
+<p><strong>この表は非常に重要．</strong></p>
+<ul>
+<li>例えば，<code>/todo/</code>に<code>GET</code>でリクエストが来た場合，<code>TodoController</code>の<code>index</code>関数が動作することを示している．</li>
+<li>このように，URLと動作する関数の対応を決めているのがルーティングである．</li>
+</ul>
+</blockquote>
+<pre><code class="language-bash">+--------+-----------+---------------------------------+---------------------+------------------------------------------------+--------------+
+| Domain | Method    | URI                             | Name                | Action                                         | Middleware   |
++--------+-----------+---------------------------------+---------------------+------------------------------------------------+--------------+
+|        | GET|HEAD  | todo                            | todo.index          | App\Http\Controllers\TodoController@index      | web          |
+|        | POST      | todo                            | todo.store          | App\Http\Controllers\TodoController@store      | web          |
+|        | GET|HEAD  | todo/create                     | todo.create         | App\Http\Controllers\TodoController@create     | web          |
+|        | GET|HEAD  | todo/{todo}                     | todo.show           | App\Http\Controllers\TodoController@show       | web          |
+|        | PUT|PATCH | todo/{todo}                     | todo.update         | App\Http\Controllers\TodoController@update     | web          |
+|        | DELETE    | todo/{todo}                     | todo.destroy        | App\Http\Controllers\TodoController@destroy    | web          |
+|        | GET|HEAD  | todo/{todo}/edit                | todo.edit           | App\Http\Controllers\TodoController@edit       | web          |
++--------+-----------+---------------------------------+---------------------+------------------------------------------------+--------------+
+</code></pre>
+<p>これで，ルーティング部分は完了である．</p>
+<h2 id="コントローラの実装一部-1"><a class="header" href="#コントローラの実装一部-1">コントローラの実装（一部）</a></h2>
+<p>URLにリクエストが来た場合に実行される関数はコントローラに記述される．まずはリクエストが来た場合に特定の画面を表示するよう処理を記述する．</p>
+<p><strong>コントローラは<code>laravel_todo/app/Http/Controllers</code>以下に配置される．</strong></p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の内容を以下のように編集する．</p>
+<p><code>view()</code>関数は指定したビューファイル（画面）を表示する．<code>todo.index</code>は<code>todo</code>フォルダの<code>index.blade.php</code>の意味．ビューファイルは次項で作成する．</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+// 下記2行を追加
+use Validator;
+use App\Models\Todo;
+
+class TodoController extends Controller
+{
+  /**
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function index()
+  {
+    // 追加
+    return view('todo.index');
+  }
+
+  /**
+   * Show the form for creating a new resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function create()
+  {
+    // 追記
+    return view('todo.create');
+  }
+
+  // 以降は変更なし
+}
+
+</code></pre>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="必要な画面の作成-1"><a class="header" href="#必要な画面の作成-1">必要な画面の作成</a></h1>
+<h2 id="共通画面の作成-1"><a class="header" href="#共通画面の作成-1">共通画面の作成</a></h2>
+<p>実際にブラウザ画面に表示される内容を記述する．ビューファイルは<code>*.blade.php</code>の形式で作成する．これは「bladeテンプレート」と呼ばれる形式であり，コントローラとのデータのやり取りなどに最適化されている．</p>
+<p><strong>ビューファイルは<code>latavel_todo/resources/view</code>ディレクトリ以下に配置する．</strong></p>
+<p>bladeテンプレートでは共通パーツと個別パーツを組み合わせて画面を構成する．例えば，アプリケーション全体を通して表示されるナビゲーションバーやエラー画面などは共通パーツである．</p>
+<p>それぞれのパーツは「コンポーネント」と呼ばれる．</p>
+<h2 id="共通パーツエラー表示の作成-1"><a class="header" href="#共通パーツエラー表示の作成-1">共通パーツ（エラー表示）の作成</a></h2>
+<p>入力値が不正な場合などはエラー画面を表示して対応する．</p>
+<p>todoの入力や編集など複数の画面で必要となるため，共通のコンポーネントとして作成する．</p>
+<p><code>latavel_todo/resources/view</code>の中に<code>common</code>フォルダを作成する．
+<code>common</code>フォルダの中に<code>errors.blade.php</code>ファイルを作成する．</p>
+<p><code>errors.blade.php</code>に以下の内容を記述する．</p>
+<pre><code class="language-php">@if (count($errors) &gt; 0)
+&lt;div&gt;
+  &lt;div class=&quot;font-medium text-red-600&quot;&gt;
+    {{ __('Whoops! Something went wrong.') }}
+  &lt;/div&gt;
+
+  &lt;ul class=&quot;mt-3 list-disc list-inside text-sm text-red-600&quot;&gt;
+    @foreach ($errors-&gt;all() as $error)
+    &lt;li&gt;{{ $error }}&lt;/li&gt;
+    @endforeach
+  &lt;/ul&gt;
+&lt;/div&gt;
+@endif
+
+</code></pre>
+<h2 id="共通パーツナビゲーションバーの調整"><a class="header" href="#共通パーツナビゲーションバーの調整">共通パーツ（ナビゲーションバー）の調整</a></h2>
+<p>ナビゲーションバーもアプリケーションを通じて使用するため，共通パーツとして作成する．</p>
+<p>「todo一覧」と「todo作成」の 2 種類のリンクを作成しておく．</p>
+<p><code>laravel_todo/resources/views/layouts/navigation.blade.php</code>の内容を以下のように編集する．</p>
+<p>全部で4箇所追記があるので注意．</p>
+<pre><code class="language-php">&lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white border-b border-gray-100&quot;&gt;
+  &lt;!-- Primary Navigation Menu --&gt;
+  &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+    &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+      &lt;div class=&quot;flex&quot;&gt;
+        &lt;!-- Logo --&gt;
+        &lt;div class=&quot;flex-shrink-0 flex items-center&quot;&gt;
+          &lt;a href=&quot;{{ route('dashboard') }}&quot;&gt;
+            &lt;x-application-logo class=&quot;block h-10 w-auto fill-current text-gray-600&quot; /&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Navigation Links --&gt;
+        &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ml-10 sm:flex&quot;&gt;
+          &lt;x-nav-link :href=&quot;route('dashboard')&quot; :active=&quot;request()-&gt;routeIs('dashboard')&quot;&gt;
+            {{ __('Dashboard') }}
+          &lt;/x-nav-link&gt;
+        &lt;/div&gt;
+        &lt;!-- ↓一覧ページへのリンクを追加 --&gt;
+        &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ml-10 sm:flex&quot;&gt;
+          &lt;x-nav-link :href=&quot;route('todo.index')&quot; :active=&quot;request()-&gt;routeIs('todo.index')&quot;&gt;
+            {{ __('Index') }}
+          &lt;/x-nav-link&gt;
+        &lt;/div&gt;
+        &lt;!-- ↓作成ページへのリンクを追加 --&gt;
+        &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ml-10 sm:flex&quot;&gt;
+          &lt;x-nav-link :href=&quot;route('todo.create')&quot; :active=&quot;request()-&gt;routeIs('todo.create')&quot;&gt;
+            {{ __('Create') }}
+          &lt;/x-nav-link&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Settings Dropdown --&gt;
+      &lt;div class=&quot;hidden sm:flex sm:items-center sm:ml-6&quot;&gt;
+        &lt;x-dropdown align=&quot;right&quot; width=&quot;48&quot;&gt;
+          &lt;x-slot name=&quot;trigger&quot;&gt;
+            &lt;button class=&quot;flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out&quot;&gt;
+              &lt;div&gt;{{ Auth::user()-&gt;name }}&lt;/div&gt;
+
+              &lt;div class=&quot;ml-1&quot;&gt;
+                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                  &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                &lt;/svg&gt;
+              &lt;/div&gt;
+            &lt;/button&gt;
+          &lt;/x-slot&gt;
+
+          &lt;x-slot name=&quot;content&quot;&gt;
+            &lt;!-- Authentication --&gt;
+            &lt;form method=&quot;POST&quot; action=&quot;{{ route('logout') }}&quot;&gt;
+              @csrf
+
+              &lt;x-dropdown-link :href=&quot;route('logout')&quot; onclick=&quot;event.preventDefault();
+                                                this.closest('form').submit();&quot;&gt;
+                {{ __('Logout') }}
+              &lt;/x-dropdown-link&gt;
+            &lt;/form&gt;
+          &lt;/x-slot&gt;
+        &lt;/x-dropdown&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Hamburger --&gt;
+      &lt;div class=&quot;-mr-2 flex items-center sm:hidden&quot;&gt;
+        &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out&quot;&gt;
+          &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+            &lt;path :class=&quot;{'hidden': open, 'inline-flex': ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+            &lt;path :class=&quot;{'hidden': ! open, 'inline-flex': open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Responsive Navigation Menu --&gt;
+  &lt;div :class=&quot;{'block': open, 'hidden': ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+    &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+      &lt;x-responsive-nav-link :href=&quot;route('dashboard')&quot; :active=&quot;request()-&gt;routeIs('dashboard')&quot;&gt;
+        {{ __('Dashboard') }}
+      &lt;/x-responsive-nav-link&gt;
+    &lt;/div&gt;
+    &lt;!-- ↓一覧ページへのリンクを追加 --&gt;
+    &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+      &lt;x-responsive-nav-link :href=&quot;route('todo.index')&quot; :active=&quot;request()-&gt;routeIs('todo.index')&quot;&gt;
+        {{ __('Index') }}
+      &lt;/x-responsive-nav-link&gt;
+    &lt;/div&gt;
+    &lt;!-- ↓作成ページへのリンクを追加 --&gt;
+    &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+      &lt;x-responsive-nav-link :href=&quot;route('todo.create')&quot; :active=&quot;request()-&gt;routeIs('todo.create')&quot;&gt;
+        {{ __('Create') }}
+      &lt;/x-responsive-nav-link&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Settings Options --&gt;
+    &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200&quot;&gt;
+      &lt;div class=&quot;flex items-center px-4&quot;&gt;
+        &lt;div class=&quot;flex-shrink-0&quot;&gt;
+          &lt;svg class=&quot;h-10 w-10 fill-current text-gray-400&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;
+            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;ml-3&quot;&gt;
+          &lt;div class=&quot;font-medium text-base text-gray-800&quot;&gt;{{ Auth::user()-&gt;name }}&lt;/div&gt;
+          &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;{{ Auth::user()-&gt;email }}&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+        &lt;!-- Authentication --&gt;
+        &lt;form method=&quot;POST&quot; action=&quot;{{ route('logout') }}&quot;&gt;
+          @csrf
+
+          &lt;x-responsive-nav-link :href=&quot;route('logout')&quot; onclick=&quot;event.preventDefault();
+                                        this.closest('form').submit();&quot;&gt;
+            {{ __('Logout') }}
+          &lt;/x-responsive-nav-link&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li>Laravel8のビューは CSS フレームワークの<code>tailwind.css</code>を使用している．</li>
+<li>予め用意されたクラス名を記述するだけでスタイルを適用できるので，ドキュメントを読みながらスタイルを変更してみよう．</li>
+</ul>
+</blockquote>
+<p>画面をリロードすると下記のようにナビゲーションが設置された状態となる（一覧ページと作成ページはまだ作成していないので動作しない点に注意）．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-navigation.png" alt="ナビゲーション設置" /></p>
+<h2 id="todo作成画面の作成"><a class="header" href="#todo作成画面の作成">todo作成画面の作成</a></h2>
+<p>まず，<code>latavel_todo/resources/view</code>の中に<code>todo</code>フォルダを作成する．</p>
+<p>続いて，<code>todo</code>フォルダの中に以下のファイルを作成する．今後必要になる画面のファイルも合わせて作成している．</p>
+<ul>
+<li><code>index.blade.php</code>（todo一覧画面）</li>
+<li><code>create.blade.php</code>（todo作成画面）</li>
+<li><code>show.blade.php</code>（todo詳細画面）</li>
+<li><code>edit.blade.php</code>（todo編集画面）</li>
+</ul>
+<p>ファイルを作成したら<code>create.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Create New Todo') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-8/12 md:w-1/2 lg:w-5/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          @include('common.errors')
+          &lt;form class=&quot;mb-6&quot; action=&quot;{{ route('todo.store') }}&quot; method=&quot;POST&quot;&gt;
+            @csrf
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;todo&quot;&gt;Todo&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;text&quot; name=&quot;todo&quot; id=&quot;todo&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;deadline&quot;&gt;Deadline&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;date&quot; name=&quot;deadline&quot; id=&quot;deadline&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;comment&quot;&gt;Comment&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;text&quot; name=&quot;comment&quot; id=&quot;comment&quot;&gt;
+            &lt;/div&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none&quot;&gt;
+              Create
+            &lt;/button&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>route('todo.store')</code>は<code>TodoController</code>の<code>store()</code>関数にデータを送ることを示している．</li>
+<li><code>@csrf</code>はセキュリティ対策．フォームからデータを送信するときには必ず記述すること．</li>
+</ul>
+</blockquote>
+<p>編集したらブラウザから<code>localhost/todo/create</code>にアクセスして動作確認．
+下記画面になっていればOK．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-create.png" alt="todo作成画面" /></p>
+<h2 id="todo一覧画面の作成"><a class="header" href="#todo一覧画面の作成">todo一覧画面の作成</a></h2>
+<p>続いて，<code>index.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Todo Index') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-10/12 md:w-8/10 lg:w-8/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;table class=&quot;text-center w-full border-collapse&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;todo&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;deadline&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;actions&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              @foreach ($todos as $todo)
+              &lt;tr class=&quot;hover:bg-grey-lighter&quot;&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;
+                  &lt;p&gt;{{$todo-&gt;todo}}&lt;/p&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;{{$todo-&gt;deadline}}&lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light flex justify-center&quot;&gt;
+                  &lt;!-- 更新ボタン --&gt;
+                  &lt;!-- 削除ボタン --&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              @endforeach
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+
+</code></pre>
+<p>こちらはエラーが発生する．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-index-error.png" alt="一覧画面のエラー" /></p>
+<p>コントローラから<code>$todos</code>という名前でデータを受け取るよう記述しているが，コントローラからデータが送られていないためである．</p>
+<p>とりあえず空のデータを送るように<code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>index()</code>を内容を以下のように編集する．</p>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>view()</code>関数の第 2 引数に渡したいデータを配列で記述する．</li>
+<li>ここでは「<code>todos</code>」という名前で「空の配列」を送っている．</li>
+<li>ビューファイル側では<code>$todos</code>とすることで渡されたデータを使うことができる．</li>
+<li>また，変数などのデータは<code>var_dump()</code>または<code>dd()</code>または<code>ddd()</code>で確認することができる．これらを使ってデータの構造を確認しながら進めると良いだろう．</li>
+</ul>
+</blockquote>
+<pre><code class="language-php">public function index()
+{
+  return view('todo.index', [
+    'todos' =&gt; []
+  ]);
+}
+
+</code></pre>
+<p>編集したらブラウザから<code>localhost/todo</code>にアクセスして動作確認．
+下記画面になっていれば OK．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-index-success.png" alt="一覧画面" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データ作成処理の実装-2"><a class="header" href="#データ作成処理の実装-2">データ作成処理の実装</a></h1>
+<p>必要な画面を揃えたので，作成ページから実際に DB にデータを保存できるようにする．</p>
+<h2 id="modelの編集-1"><a class="header" href="#modelの編集-1">Modelの編集</a></h2>
+<p>Modelの役割は「DBとのデータをやり取り」である．ModelにはDBからどのようにデータを取得するか，などの処理を記述する．</p>
+<p>ただし，Modelには予め使用頻度の高い処理（基本的なCRUD）が用意されているため，今回記述するコードはそれほど多くない．</p>
+<p>まず，テーブル対して，Laravel側からデータの作成や編集が行えないカラムを設定する．</p>
+<p>これはクライアントから送信されてくるデータがIDやユーザ権限などの情報を書き換えてしまうリスクを低減させるためである．</p>
+<p><code>laravel_todo/app/Models/Todo.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Todo extends Model
+{
+  use HasFactory;
+
+  // アプリケーション側でcreateなどできない値を記述
+  // ↓以下の処理を記述
+  protected $guarded = [
+    'id',
+    'created_at',
+    'updated_at',
+  ];
+}
+
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>$guarded</code>はアプリケーション側から変更できないカラムを指定する（ブラックリスト）．</li>
+<li>対して，<code>$fillable</code>はアプリケーション側から変更できるカラムを指定する（ホワイトリスト）．</li>
+<li>どちらを使用しても良いが，どちらかを使用する必要がある．</li>
+</ul>
+</blockquote>
+<h2 id="controllerの編集-1"><a class="header" href="#controllerの編集-1">Controllerの編集</a></h2>
+<p>続いて，コントローラに「Modelに対しての命令」を記述する．DBとやり取りする関数はすでに定義されているのでモデル側に新たな記述は必要ない．</p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>store()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function store(Request $request)
+{
+  // バリデーション
+  $validator = Validator::make($request-&gt;all(), [
+    'todo' =&gt; 'required | max:191',
+    'deadline' =&gt; 'required',
+  ]);
+  // バリデーション:エラー
+  if ($validator-&gt;fails()) {
+    return redirect()
+      -&gt;route('todo.create')
+      -&gt;withInput()
+      -&gt;withErrors($validator);
+  }
+  // create()は最初から用意されている関数
+  // 戻り値は挿入されたレコードの情報
+  $result = Todo::create($request-&gt;all());
+  // ルーティング「todo.index」にリクエスト送信（一覧ページに移動）
+  return redirect()-&gt;route('todo.index');
+}
+
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>create.blade.php</code>から送信されていたデータは<code>$request</code>に入っている．<code>$request-&gt;all()</code>とすることで全部取得することができる．</li>
+<li><code>redirect()-&gt;route('todo.index')</code>は指定したコントローラの関数を動かす．今回は<code>TodoController</code>の<code>index()</code>関数．</li>
+</ul>
+</blockquote>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データ一覧画面の実装-1"><a class="header" href="#データ一覧画面の実装-1">データ一覧画面の実装</a></h1>
+<p>一覧画面では締切が早い順にソートしてデータを表示する．</p>
+<h3 id="modelの処理-1"><a class="header" href="#modelの処理-1">Modelの処理</a></h3>
+<p>まず，上記の条件でデータを取得する関数を Modelに作成する．</p>
+<p><code>laravel_todo/app/Models/Todo.php</code>に以下の関数を作成する．</p>
+<pre><code class="language-php">public static function getAllOrderByDeadline()
+{
+  return self::orderBy('deadline', 'asc')-&gt;get();
+}
+
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>self</code>は Todoモデルのこと．</li>
+<li><code>orderBy()</code>はSQLのものと同じ理解でOK．</li>
+<li>最後の<code>get()</code>がないと実行されないので注意．</li>
+</ul>
+</blockquote>
+<h2 id="controllerを編集-1"><a class="header" href="#controllerを編集-1">Controllerを編集</a></h2>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>index()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function index()
+{
+  // モデルに定義した関数を実行する．
+  $todos = Todo::getAllOrderByDeadline();
+  return view('todo.index', [
+    'todos' =&gt; $todos
+  ]);
+}
+
+</code></pre>
+<p>todo作成画面でデータを入力して送信すると，自動的に一覧画面に切り替わる．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-create-post.png" alt="データ作成" /></p>
+<p>自分が入力したデータが表示されていればOK．何件かデータを入れておこう．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-index-list2.png" alt="データ複数件追加" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データ詳細画面の実装-1"><a class="header" href="#データ詳細画面の実装-1">データ詳細画面の実装</a></h1>
+<p>詳細画面はtodoの1件を個別に表示する．</p>
+<h2 id="一覧画面に詳細画面へのリンクを作成-1"><a class="header" href="#一覧画面に詳細画面へのリンクを作成-1">一覧画面に詳細画面へのリンクを作成</a></h2>
+<p>各todoの詳細を取得する処理と表示する画面を作成する．</p>
+<p>一覧画面のtodo名をクリックすると詳細画面に移動するようにする．</p>
+<p>クリックするとコントローラの<code>show()</code>関数にリクエストを送るように記述している．</p>
+<p><code>index.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Todo Index') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-10/12 md:w-8/10 lg:w-8/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;table class=&quot;text-center w-full border-collapse&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;todo&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;deadline&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;actions&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              @foreach ($todos as $todo)
+              &lt;tr class=&quot;hover:bg-grey-lighter&quot;&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;
+                  &lt;!-- ↓ここがリンクになるように編集する --&gt;
+                  &lt;a href=&quot;{{ route('todo.show',$todo-&gt;id) }}&quot;&gt;{{$todo-&gt;todo}}&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;{{$todo-&gt;deadline}}&lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light flex justify-center&quot;&gt;
+                  &lt;!-- 更新ボタン --&gt;
+                  &lt;!-- 削除ボタン --&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              @endforeach
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+
+</code></pre>
+<h2 id="指定した1件のデータを取得する処理を追加-1"><a class="header" href="#指定した1件のデータを取得する処理を追加-1">指定した1件のデータを取得する処理を追加</a></h2>
+<p><code>show()</code>関数では，IDを指定して1件のデータを取得したい．</p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>show()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function show($id)
+{
+  $todo = Todo::find($id);
+  return view('todo.show', ['todo' =&gt; $todo]);
+}
+
+</code></pre>
+<p>ここでは，受け取ったIDの値でテーブルからデータを取り出し，<code>todo</code>という名前で<code>show.blade.php</code>に渡している．</p>
+<h2 id="詳細表示画面の作成-1"><a class="header" href="#詳細表示画面の作成-1">詳細表示画面の作成</a></h2>
+<p>詳細画面の<code>show.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Show Todo Detail') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-8/12 md:w-1/2 lg:w-5/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;div class=&quot;mb-6&quot;&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;p class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot;&gt;Todo&lt;/p&gt;
+              &lt;p class=&quot;py-2 px-3 text-grey-darkest&quot; id=&quot;todo&quot;&gt;
+                {{$todo-&gt;todo}}
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;p class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot;&gt;Deadline&lt;/p&gt;
+              &lt;p class=&quot;py-2 px-3 text-grey-darkest&quot; id=&quot;deadline&quot;&gt;
+                {{$todo-&gt;deadline}}
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;p class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot;&gt;Comment&lt;/p&gt;
+              &lt;p class=&quot;py-2 px-3 text-grey-darkest&quot; id=&quot;comment&quot;&gt;
+                {{$todo-&gt;comment}}
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;a href=&quot;{{ route('todo.index') }}&quot; class=&quot;block text-center w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none&quot;&gt;
+              Back
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+
+</code></pre>
+<p>一覧画面で各todoをクリックし，下記のように詳細画面が表示されればOK．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-show.png" alt="詳細画面" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データ削除処理の実装-1"><a class="header" href="#データ削除処理の実装-1">データ削除処理の実装</a></h1>
+<p>一覧画面に削除ボタンを設置し，クリックしたら該当するデータを削除できるようにする．</p>
+<h2 id="一覧画面に削除ボタンを追加-1"><a class="header" href="#一覧画面に削除ボタンを追加-1">一覧画面に削除ボタンを追加</a></h2>
+<p><code>index.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Todo Index') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-10/12 md:w-8/10 lg:w-8/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;table class=&quot;text-center w-full border-collapse&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;todo&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;deadline&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;actions&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              @foreach ($todos as $todo)
+              &lt;tr class=&quot;hover:bg-grey-lighter&quot;&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;
+                  &lt;a href=&quot;{{ route('todo.show',$todo-&gt;id) }}&quot;&gt;{{$todo-&gt;todo}}&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;{{$todo-&gt;deadline}}&lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light flex justify-center&quot;&gt;
+                  &lt;!-- 更新ボタン --&gt;
+                  &lt;!-- 削除ボタン --&gt;
+                  &lt;form action=&quot;{{ route('todo.destroy',$todo-&gt;id) }}&quot; method=&quot;POST&quot;&gt;
+                    @method('delete')
+                    @csrf
+                    &lt;button type=&quot;submit&quot; class=&quot;mr-2 ml-2 text-sm bg-black hover:bg-gray-900 hover:shadow-none text-white py-1 px-2 focus:outline-none focus:shadow-outline&quot;&gt;
+                      &lt;svg class=&quot;h-6 w-6 text-gray-500&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;white&quot;&gt;
+                        &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16&quot; /&gt;
+                      &lt;/svg&gt;
+                    &lt;/button&gt;
+                  &lt;/form&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              @endforeach
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li>削除ボタンクリック時には，コントローラの<code>destroy()</code>関数にリクエストが送られる．</li>
+<li>削除の処理を行うには<code>DELETE</code>メソッドでリクエストを送る必要があるが，formからはGETまたはPOSTでしか送れない．</li>
+<li><code>@method('delete')</code>を記述することで，<code>DELETE</code>メソッドで送信できる．</li>
+</ul>
+</blockquote>
+<p>一覧画面を確認し，削除ボタンが表示されていればOK．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-index-delete-button.png" alt="削除ボタン追加" /></p>
+<h2 id="指定したデータを削除する処理の作成-1"><a class="header" href="#指定したデータを削除する処理の作成-1">指定したデータを削除する処理の作成</a></h2>
+<p>まずIDで指定したデータを1件抽出し，そのデータを削除する，という流れ．</p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>destroy()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function destroy($id)
+{
+  $result = Todo::find($id)-&gt;delete();
+  return redirect()-&gt;route('todo.index');
+}
+
+</code></pre>
+<p>動作させて確認する．削除ボタンをクリックし，該当するデータが削除されればOK．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="データ更新処理の実装-1"><a class="header" href="#データ更新処理の実装-1">データ更新処理の実装</a></h1>
+<p>更新処理は</p>
+<ol>
+<li>一覧画面に編集ボタンを設置．</li>
+<li>編集ボタンをクリックしたら編集画面に移動.</li>
+<li>編集画面でデータを書き換え，送信ボタンクリックでDBのデータを更新する．</li>
+</ol>
+<h2 id="一覧画面に編集ボタンを追加-1"><a class="header" href="#一覧画面に編集ボタンを追加-1">一覧画面に編集ボタンを追加</a></h2>
+<p><code>index.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Todo Index') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-10/12 md:w-8/10 lg:w-8/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;table class=&quot;text-center w-full border-collapse&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;todo&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;deadline&lt;/th&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;actions&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              @foreach ($todos as $todo)
+              &lt;tr class=&quot;hover:bg-grey-lighter&quot;&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;
+                  &lt;a href=&quot;{{ route('todo.show',$todo-&gt;id) }}&quot;&gt;{{$todo-&gt;todo}}&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;{{$todo-&gt;deadline}}&lt;/td&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light flex justify-center&quot;&gt;
+                  &lt;!-- 更新ボタン --&gt;
+                  &lt;form action=&quot;{{ route('todo.edit',$todo-&gt;id) }}&quot; method=&quot;GET&quot;&gt;
+                    @csrf
+                    &lt;button type=&quot;submit&quot; class=&quot;mr-2 ml-2 text-sm bg-black hover:bg-gray-900 hover:shadow-none text-white py-1 px-2 focus:outline-none focus:shadow-outline&quot;&gt;
+                      &lt;svg class=&quot;h-6 w-6 text-gray-500&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;white&quot;&gt;
+                        &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z&quot; /&gt;
+                      &lt;/svg&gt;
+                    &lt;/button&gt;
+                  &lt;/form&gt;
+                  &lt;!-- 削除ボタン --&gt;
+                  &lt;form action=&quot;{{ route('todo.destroy',$todo-&gt;id) }}&quot; method=&quot;POST&quot;&gt;
+                    @method('delete')
+                    @csrf
+                    &lt;button type=&quot;submit&quot; class=&quot;mr-2 ml-2 text-sm bg-black hover:bg-gray-900 hover:shadow-none text-white py-1 px-2 focus:outline-none focus:shadow-outline&quot;&gt;
+                      &lt;svg class=&quot;h-6 w-6 text-gray-500&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;white&quot;&gt;
+                        &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16&quot; /&gt;
+                      &lt;/svg&gt;
+                    &lt;/button&gt;
+                  &lt;/form&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              @endforeach
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+
+</code></pre>
+<p>一覧画面に編集ボタンが表示されていればOK．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-index-edit-button.png" alt="編集ボタン追加" /></p>
+<h2 id="更新画面に移動する処理の作成-1"><a class="header" href="#更新画面に移動する処理の作成-1">更新画面に移動する処理の作成</a></h2>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>edit()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function edit($id)
+{
+  $todo = Todo::find($id);
+  return view('todo.edit', ['todo' =&gt; $todo]);
+}
+
+</code></pre>
+<p>やっていることは<code>create()</code>関数と同様．</p>
+<h2 id="更新画面の作成-1"><a class="header" href="#更新画面の作成-1">更新画面の作成</a></h2>
+<p><code>edit.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Edit Todo') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-8/12 md:w-1/2 lg:w-5/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          @include('common.errors')
+          &lt;form class=&quot;mb-6&quot; action=&quot;{{ route('todo.update',$todo-&gt;id) }}&quot; method=&quot;POST&quot;&gt;
+            @method('put')
+            @csrf
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;todo&quot;&gt;Todo&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;text&quot; name=&quot;todo&quot; id=&quot;todo&quot; value=&quot;{{$todo-&gt;todo}}&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;deadline&quot;&gt;Deadline&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;date&quot; name=&quot;deadline&quot; id=&quot;deadline&quot; value=&quot;{{$todo-&gt;deadline}}&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;comment&quot;&gt;Comment&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;text&quot; name=&quot;comment&quot; id=&quot;comment&quot; value=&quot;{{$todo-&gt;comment}}&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex justify-evenly&quot;&gt;
+              &lt;a href=&quot;{{ route('todo.index') }}&quot; class=&quot;block text-center w-5/12 py-3 mt-6 font-medium tracking-widest text-black uppercase bg-gray-100 shadow-sm focus:outline-none hover:bg-gray-200 hover:shadow-none&quot;&gt;
+                Back
+              &lt;/a&gt;
+              &lt;button type=&quot;submit&quot; class=&quot;w-5/12 py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none&quot;&gt;
+                Update
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+
+</code></pre>
+<p>一覧画面の更新ボタンをクリックし，現在のデータが表示されていればOK．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-edit.png" alt="編集画面" /></p>
+<h2 id="指定したデータを更新する処理の作成-1"><a class="header" href="#指定したデータを更新する処理の作成-1">指定したデータを更新する処理の作成</a></h2>
+<p>編集画面でデータを書き換え，コントローラの<code>update()</code>関数にデータを送信し，DBのデータを更新する．</p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>update()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function update(Request $request, $id)
+{
+  //バリデーション
+  $validator = Validator::make($request-&gt;all(), [
+    'todo' =&gt; 'required | max:191',
+    'deadline' =&gt; 'required',
+  ]);
+  //バリデーション:エラー
+  if ($validator-&gt;fails()) {
+    return redirect()
+      -&gt;route('todo.edit', $id)
+      -&gt;withInput()
+      -&gt;withErrors($validator);
+  }
+  //データ更新処理
+  // updateは更新する情報がなくても更新が走る（updated_atが更新される）
+  $result = Todo::find($id)-&gt;update($request-&gt;all());
+  // fill()save()は更新する情報がない場合は更新が走らない（updated_atが更新されない）
+  // $redult = Todo::find($id)-&gt;fill($request-&gt;all())-&gt;save();
+  return redirect()-&gt;route('todo.index');
+}
+
+</code></pre>
+<p>編集画面で書き換えたデータに更新されればOK．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-index-updated.png" alt="データ更新結果" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ユーザ情報の利用-1"><a class="header" href="#ユーザ情報の利用-1">ユーザ情報の利用</a></h1>
+<p>はじめのほうで，ユーザ認証を行うbreezeライブラリをインストールしたため，これを利用してユーザ管理を行う．</p>
+<p>まず，認証ユーザのみがアプリケーションの機能を利用できるように処理を変更する．</p>
+<p>続いて，データ作成時にユーザ情報を含めることで，ログインユーザが作成したデータのみを扱えるように処理を変更する．</p>
+<h2 id="ログインしていないユーザはアプリケーションにアクセスできないようにする-1"><a class="header" href="#ログインしていないユーザはアプリケーションにアクセスできないようにする-1">ログインしていないユーザはアプリケーションにアクセスできないようにする．</a></h2>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use Validator;
+use App\Models\Todo;
+// ↓追加
+use Auth;
+
+class TodoController extends Controller
+{
+  // ↓関数を作成
+  public function __construct()
+  {
+    $this-&gt;middleware(['auth']);
+  }
+
+  // ...省略
+
+}
+
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li>ユーザの認証情報を使用するため，<code>use Auth;</code>を記述している．</li>
+<li><code>__construct()</code>関数は，その他の関数が実行される場合にその前に実行される．</li>
+<li><code>middleware(['auth'])</code>はログイン状況を確認して，ログインしていない状態ならログインページに戻す処理を実行する．</li>
+</ul>
+</blockquote>
+<p>一旦ログアウトしてURL直打ちするとログイン画面に戻される状態になっていればOK．</p>
+<h2 id="todoテーブルにユーザidカラムを追加する-1"><a class="header" href="#todoテーブルにユーザidカラムを追加する-1">todoテーブルにユーザIDカラムを追加する</a></h2>
+<blockquote>
+<p>📦 <strong>Laravelコンテナ内の操作</strong></p>
+<pre><code class="language-bash">$ docker-compose exec laravel.test bash
+root@8544d96d2334:/var/www/html#
+</code></pre>
+</blockquote>
+<p>カラムの変更はマイグレーションファイルから行う．</p>
+<p><code>laravel_todo/database/migration/2020_12_31_033638_create_todos_table.php</code>を開く．
+下記にように編集する．</p>
+<p>カラム名は必ず<code>user_id</code>とすること（あとでUserモデルと連携させるため）．</p>
+<blockquote>
+<p>他のテーブルとrelationさせるためには，カラム名を「<code>モデル名小文字_id</code>」とする必要がある．</p>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateTodosTable extends Migration
+{
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create('todos', function (Blueprint $table) {
+      $table-&gt;id();
+      // ↓追加
+      $table-&gt;integer('user_id');
+      $table-&gt;string('todo');
+      $table-&gt;date('deadline');
+      $table-&gt;text('comment')-&gt;nullable();
+      // ↑ここまで
+      $table-&gt;timestamps();
+    });
+  }
+
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists('todos');
+  }
+}
+
+</code></pre>
+<p>以下のコマンドを実行する．<code>:fresh</code>をつけることで，既存のテーブルを一旦消去して再度マイグレーションを実行する．</p>
+<pre><code class="language-bash">$ php artisan migrate:fresh
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Dropped all tables successfully.
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (33.21ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (25.65ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (28.30ms)
+Migrating: 2020_12_31_033638_create_todos_table
+Migrated:  2020_12_31_033638_create_todos_table (17.26ms)
+</code></pre>
+<h2 id="テーブルの確認"><a class="header" href="#テーブルの確認">テーブルの確認</a></h2>
+<blockquote>
+<p>📦 <strong>MySQLコンテナ内の操作</strong></p>
+<pre><code class="language-bash">$ docker-compose exec mysql bash
+root@d984f6614597:/#
+</code></pre>
+</blockquote>
+<p>うまくいったら，mysqlにログインしてテーブルを確認する．パスワードは<code>password</code>．</p>
+<pre><code class="language-bash">$ mysql -u sail -p
+
+mysql&gt; use laravel_todo;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql&gt; show tables;
++------------------------+
+| Tables_in_laravel_todo |
++------------------------+
+| failed_jobs            |
+| migrations             |
+| password_resets        |
+| todos                  |
+| users                  |
++------------------------+
+5 rows in set (0.00 sec)
+
+mysql&gt; desc todos;
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| id         | bigint unsigned | NO   | PRI | NULL    | auto_increment |
+| user_id    | int             | NO   |     | NULL    |                |
+| todo       | varchar(191)    | NO   |     | NULL    |                |
+| deadline   | date            | NO   |     | NULL    |                |
+| comment    | text            | YES  |     | NULL    |                |
+| created_at | timestamp       | YES  |     | NULL    |                |
+| updated_at | timestamp       | YES  |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+7 rows in set (0.01 sec)
+
+mysql&gt; exit;
+Bye
+
+</code></pre>
+<p>user_idカラムが追加されていればOK．</p>
+<p>ユーザテーブルは初期化されているので再度registerすること．</p>
+<h2 id="データ追加時にuser_idを追加-1"><a class="header" href="#データ追加時にuser_idを追加-1">データ追加時にuser_idを追加</a></h2>
+<p>todoのデータを作成する際に，「誰が作成したのか」がわかるように，データにログインユーザのIDを追加する．</p>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>store()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">public function store(Request $request)
+{
+  // バリデーション
+  $validator = Validator::make($request-&gt;all(), [
+    'todo' =&gt; 'required | max:255',
+    'deadline' =&gt; 'required',
+  ]);
+  // バリデーション:エラー
+  if ($validator-&gt;fails()) {
+    return redirect()
+      -&gt;route('todo.create')
+      -&gt;withInput()
+      -&gt;withErrors($validator);
+  }
+  // フォームから送信されてきたデータとユーザIDをマージする
+  $data = $request-&gt;merge(['user_id' =&gt; Auth::user()-&gt;id])-&gt;all();
+  // create()は最初から用意されている関数
+  // 戻り値は挿入されたレコードの情報
+  $result = Todo::create($data);
+  // ルーティング「todo.index」にリクエスト送信（一覧ページに移動）
+  return redirect()-&gt;route('todo.index');
+}
+
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>$request-&gt;merge()</code>でユーザIDを追加している．</li>
+<li><code>Auth::user()-&gt;id</code>で現在ログインしているユーザのIDを取得することができる．</li>
+<li><code>Auth::user()</code>には他にもデータが入っているので，<code>dd()</code>などで確認してみると良いだろう．</li>
+</ul>
+</blockquote>
+<h2 id="一覧画面にログインユーザが登録したデータのみを表示する-1"><a class="header" href="#一覧画面にログインユーザが登録したデータのみを表示する-1">一覧画面にログインユーザが登録したデータのみを表示する</a></h2>
+<p>今回の場合，ユーザとtodoが「1対多」の関係となっている．</p>
+<p>Laravelでは，このような場合に親となるデータから子のデータを取得する方法が準備されている．</p>
+<p><code>laravel_todo/app/Models/User.php</code>に以下のように編集する．</p>
+<pre><code class="language-php">class User extends Authenticatable
+{
+  // 省略
+
+  public function get_my_todos()
+  {
+    return $this-&gt;hasMany(Todo::class)-&gt;orderBy('deadline', 'asc');
+  }
+}
+
+</code></pre>
+<p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>index()</code>を内容を以下のように編集する．</p>
+<pre><code class="language-php">use App\Models\User;
+
+// 省略
+
+public function index()
+{
+  // Userモデルに定義した関数を実行する．
+  $todos = User::find(Auth::user()-&gt;id)-&gt;get_my_todos;
+  return view('todo.index', [
+    'todos' =&gt; $todos
+  ]);
+}
+
+</code></pre>
+<p>動作させて検証する．異なるユーザでログインし，個別にデータが表示されることを確認すると良いだろう．</p>
+<p><img src="laravel/laravel02_docker/../img/20210104-index-auth.png" alt="認証済み一覧画面" /></p>
+<p>ここまでで基本的なCRUD処理を使ったtodoリストのアプリケーションが完成！</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="あとがき-1"><a class="header" href="#あとがき-1">あとがき</a></h1>
+<p>フレームワークに挑戦する場合，初見で理解することは不可能．</p>
+<p>とりあえず今回のアプリケーションを10回程度実装してみることをオススメする．</p>
+<blockquote>
+<p>次のステップ</p>
+<ul>
+<li>todo リストを元に別の項目でアプリケーションをつくってみよう（掲示板，ブックマークなど）．</li>
+<li>より多機能な認証ライブラリ（Jetstream）を使ってソーシャルログインなど実装してみよう．</li>
+<li>LaravelでAPIを実装してみよう！</li>
+</ul>
+</blockquote>
+<p>今回はここまで( `･ω･)b</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="デプロイ"><a class="header" href="#デプロイ">デプロイ</a></h1>
+<p>AWS Cloud9で作成したプロジェクトをLolipopマネージドクラウドにデプロイする．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="デプロイの概要"><a class="header" href="#デプロイの概要">デプロイの概要</a></h1>
+<h2 id="デプロイ概略図"><a class="header" href="#デプロイ概略図">デプロイ概略図</a></h2>
+<p>実装したプロジェクトをGitHubにpushし，デプロイ先のサーバ（マネージドクラウド）にログインして GitHub上のプロジェクトをclone(or pull)することでデプロイを実現する．</p>
+<p><img src="laravel/deploy/./img/laravel_deploy_image.png" alt="deploy_image" /></p>
+<h3 id="-key-point"><a class="header" href="#-key-point">💡 Key Point</a></h3>
+<blockquote>
+<p>下記3パターンの操作環境があるので，都度正しい操作環境で操作しているかどうかを確認すること．</p>
+<ul>
+<li>ブラウザ</li>
+<li>ローカルPCのターミナル</li>
+<li>AWS Cloud9</li>
+<li>マネージドクラウド</li>
+</ul>
+</blockquote>
+<h2 id="マネクラでプロジェクトを作成する"><a class="header" href="#マネクラでプロジェクトを作成する">マネクラでプロジェクトを作成する．</a></h2>
+<blockquote>
+<p>ブラウザでの操作</p>
+</blockquote>
+<p>マネクラに登録してプロジェクトを作成しておく．PHPを選択し，プロジェクト名は任意に設定．</p>
+<p>登録したらプロジェクトページを開いておくと良い．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="aws-cloud9編実装したコードをgithubへpush"><a class="header" href="#aws-cloud9編実装したコードをgithubへpush">【AWS Cloud9編】実装したコードをGitHubへpush</a></h1>
+<p>まずはAWS Cloud9上で実装したコードをGitHub上にpushする．</p>
+<h2 id="ssh-keyの準備"><a class="header" href="#ssh-keyの準備">ssh-keyの準備</a></h2>
+<blockquote>
+<p>AWS Cloud9での操作</p>
+</blockquote>
+<p>プロジェクトのenvironmentを立ち上げておく．</p>
+<p>以下のコマンドを順番に実行する．</p>
+<pre><code class="language-bash">$ cd ~/.ssh
+$ ssh-keygen
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/ubuntu/.ssh/id_rsa.
+Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:n7fnnBQCsfgRW+skKRqTGscuroFrnZvo2t3zh4uaQEQ ubuntu@ip-172-31-35-172
+The key's randomart image is:
++---[RSA 2048]----+
+|  w       w .    |
+| .   . . . w .   |
+|  . . * w w w    |
+| .   = + w *     |
+|  . w w w . w .  |
+| w . .   . . . . |
+|. + w    .w . .  |
+| +.B.w... .. +.. |
+|*www=.wwww  .w+  |
++----[SHA256]-----+
+</code></pre>
+<p>引き続き以下を実行し，ssh-keyを表示する．</p>
+<pre><code class="language-bash">$ cat ~/.ssh/id_rsa.pub
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCu8btWWrpYcfx3Wn02FMs1v0DnZw+vNJi4U9Jq4Jq/K1f2uv40fOrfQ26asux9ME6ai+aCyNnmz7oQnWv9gcqMEHtVLzi4x0CJ11oskIqNoAJe0do2wwwwwwwwwwwwwwwwg9WnbB0aqaJtntZOs4I8RM3SD5LPvGtktPhpjBWLK4lt6bV+KDxYuWPN5ciVX7fp7H9MI7jJu/ksvDXsU4OStutPyAucPHt6iBVC3c3IlL124yoevkZGOYZyXHX+jlRcRO8oyCa0L6cRHUzi8djBcuBAX7Uwpk1aS5kplzCsLLifALwePiiy+I8Calsq9ThX+uqo16VXiZkY/+JKJDH/ ubuntu@ip-172-31-35-172
+</code></pre>
+<h2 id="作成したssh-keyをgithubに登録"><a class="header" href="#作成したssh-keyをgithubに登録">作成したssh-keyをGitHubに登録</a></h2>
+<p>上記で表示したssh-keyを全てコピーする．</p>
+<blockquote>
+<p>ブラウザでの操作</p>
+</blockquote>
+<p>GitHubのサイトにAWS Cloud9で作成したssh-keyを登録する．</p>
+<p>プロジェクト用のリポジトリを新しく作成し，URLをコピーしておく．</p>
+<h2 id="aws-cloud9で作成したプロダクトをgithubにpushする"><a class="header" href="#aws-cloud9で作成したプロダクトをgithubにpushする">AWS Cloud9で作成したプロダクトをGitHubにpushする．</a></h2>
+<blockquote>
+<p>AWS Cloud9での操作</p>
+</blockquote>
+<p>【重要】まずプロジェクトのディレクトリに移動する．</p>
+<p>以下のコマンドを実行する．</p>
+<pre><code class="language-bash">$ cd ~/environment/プロジェクト名
+$ git init
+$ git remote add origin YOUR_REPOSITORY_URL
+$ git add .
+$ git commit -m&quot;first commit&quot;
+$ git push origin master
+</code></pre>
+<p>GitHubにプロダクトのソースコードがpushされていればOK！</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="docker編実装したコードをgithubへpush"><a class="header" href="#docker編実装したコードをgithubへpush">【Docker編】実装したコードをGitHubへpush</a></h1>
+<p>いつもどおりGitHubにコードをpushする．</p>
+<h2 id="リポジトリの作成"><a class="header" href="#リポジトリの作成">リポジトリの作成</a></h2>
+<p>適当につくっておく．</p>
+<h2 id="ソースコードのpush"><a class="header" href="#ソースコードのpush">ソースコードのpush</a></h2>
+<blockquote>
+<p>ローカルでの操作．「コンテナにログインしていない状態」で実行すること．</p>
+</blockquote>
+<p>以下のコマンドを実行する．</p>
+<p>必ずプロジェクトのフォルダに<code>cd</code>してから実行すること！！</p>
+<pre><code class="language-bash">$ git init
+$ git remote add origin YOUR_REPOSITORY_URL
+$ git add .
+$ git commit -m&quot;first commit&quot;
+$ git push origin main
+</code></pre>
+<p>GitHubにプロダクトのソースコードがpushされていればOK！</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ローカルからロリポップマネージドクラウドへのログイン"><a class="header" href="#ローカルからロリポップマネージドクラウドへのログイン">ローカルからロリポップマネージドクラウドへのログイン</a></h1>
+<p>GitHub上のソースコードをサーバ上にデプロイするため，ローカルPCのターミナルでマネージドクラウドの仮想マシンを操作する．</p>
+<p>まずはローカルPCとマネージドクラウドの間で通信ができるようにするためのssh-keyを準備する．</p>
+<p>（本手順は初めてマネージドクラウドと通信する場合のみ必要であり，プロジェクトが2つ目以降の場合は操作不要．）</p>
+<blockquote>
+<p>ブラウザでの操作</p>
+</blockquote>
+<p>Lolipopのページの右上から「SSH公開鍵の追加」をクリックする．</p>
+<p>自分のPCに保存されているssh-keyを適当に登録する．</p>
+<blockquote>
+<p><strong>ない場合は，ローカルPCのターミナルで</strong>以下の流れで作成&amp;表示し，マネクラに登録する．</p>
+<pre><code class="language-bash">$ cd ~/.ssh
+$ ssh-keygen
+$ cat ~/.ssh/id_rsa.pub
+</code></pre>
+</blockquote>
+<p>ブラウザでプロジェクトのページを開いていない場合は再度開いておく．</p>
+<blockquote>
+<p>PCのターミナルでの操作</p>
+</blockquote>
+<p>マネクラのプロジェクトページに表示されている「SSHコマンド」を入力してサーバにアクセスする．</p>
+<p><strong>下記は一例なので必ず「自分のプロジェクト管理画面に表示されているSSHコマンド」を実行すること．</strong></p>
+<pre><code class="language-bash">$ ssh -p 38216 reliable-amami-8204@ssh-1.mc.lolipop.jp
+</code></pre>
+<p>実行結果．（何か訊かれたら<code>yes</code>で進む）</p>
+<pre><code class="language-bash">The authenticity of host '[ssh-1.mc.lolipop.jp]:38216 ([157.7.190.236]:38216)' can't be established.
+ECDSA key fingerprint is SHA256:fqQ1YxW9OFrAwKVtnt92YIB2Bv6MQfJVGRo73gktLmk.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '[ssh-1.mc.lolipop.jp]:38216,[157.7.190.236]:38216' (ECDSA) to the list of known hosts.
+Last login: Thu Jun 20 02:06:09 2019 from 10.1.36.1
+  __  __  ____   _          _ _
+ |  \/  |/ ___| | |    ___ | (_)_ __   ___  _ __
+ | |\/| | |     | |   / _ \| | | '_ \ / _ \| '_ \
+ | |  | | |___ _| |__| (_) | | | |_) | (_) | |_) |
+ |_|  |_|\____(_)_____\___/|_|_| .__/ \___/| .__/
+export PATH=$PATH:/var/www/bin
+                               |_|         |_|
+
+******* Welcome to Lolipop! Managed Cloud *******
+
+reliable-amami-8204@ssh-aws-laravel01:~$
+</code></pre>
+<p>この状態で<code>reliable-hoge-6666@ssh-aws-laravel01:~$ </code>（← 状況によって文字列は異なる）となっていればうまくログインできている状態．</p>
+<p>ある程度時間が経過すると自動的にログアウトされるので，その場合は再度SSHコマンドを実行するとログインできる．</p>
+<h3 id="-key-point-1"><a class="header" href="#-key-point-1">💡 Key Point</a></h3>
+<blockquote>
+<p><strong>※以下の「Lolipopでの操作」は上記の状態（ターミナルが<code>reliable-hoge-6666@ssh-aws-laravel01:~$ </code>）になっていることを確認すること．</strong></p>
+</blockquote>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ロリポップマネージドクラウドとgithubのssh通信設定"><a class="header" href="#ロリポップマネージドクラウドとgithubのssh通信設定">ロリポップマネージドクラウドとGitHubのSSH通信設定</a></h1>
+<p>ここまででローカルPCからマネージドクラウド上の仮想マシンを操作できるようになった．</p>
+<p>続いて，マネージドクラウド上にGitHubのソースコードをデプロイするため，両者の間で通信できるように設定を行う．</p>
+<h2 id="ssh-keyの発行"><a class="header" href="#ssh-keyの発行">ssh-keyの発行</a></h2>
+<blockquote>
+<p>Lolipopでの操作</p>
+</blockquote>
+<p>ssh-keyを作成し，マネクラとGitHubの間で通信できるようにする．</p>
+<pre><code class="language-bash">$ cd .ssh
+$ ssh-keygen
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Generating public/private rsa key pair.
+Enter file in which to save the key (/var/www//.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /var/www//.ssh/id_rsa.
+Your public key has been saved in /var/www//.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:NPkD2j3bgqXWJ2G2nO2hMjGh3pZwruePjPnFosuUuPc reliable-amami-8204@ssh-aws-laravel01.lolipop.io-2adc16106d
+The key's randomart image is:
++---[RSA 2048]----+
+|                 |
+|         .       |
+|        =        |
+|       +.=       |
+|      ..w.w      |
+|     .w.+w w     |
+|    ..w==+@ =    |
+|     +w*w+ * .   |
+|    ..www+w .    |
++----[SHA256]-----+
+</code></pre>
+<h2 id="ssh-keyの表示と登録"><a class="header" href="#ssh-keyの表示と登録">ssh-keyの表示と登録</a></h2>
+<p>作成したssh-keyを表示する．</p>
+<pre><code class="language-bash">$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJPmXzhA733dAupv+pVUG6I04agsUSKI7BeekJgBn//1P7Ca96JJkqd1M8yBHARSJxYdSUC31Dn9UpmO87XVLVlVCjmwwwwwwwwwwwwwwwwzIqvRtJmOfvQEfJ/cvBA/bPkrD3V80epwlWiVfWNPSKIZYKVf3LRJI2RoU8WtNSI/Zc8VOH+NOxRVQRQrYaHUSjKDqwFqKK/ttuG4xoRHXPI4Xj4rNn+zfNcd52z0Njq/TtpOAZ6TH6Xtg366sc60HJpIBcQfiz8Kq1mpmw5aLqTzz2l6V0rbsQB0zZCIaqdpFdRUf47aMRBpqK10LPB9N8jC3Gq5Gb1WuJY5Asbzxp reliable-amami-8204@ssh-aws-laravel01.lolipop.io-2adc16106d
+</code></pre>
+<blockquote>
+<p>ブラウザでの操作</p>
+</blockquote>
+<p>上記で表示されたGitHubサイトにssh-keyを登録する．流れはこれまでと同様．</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="github上のコードをマネージドクラウドにデプロイ"><a class="header" href="#github上のコードをマネージドクラウドにデプロイ">GitHub上のコードをマネージドクラウドにデプロイ</a></h1>
+<p>ここまでで下記のように必要な通信ができるようになった．</p>
+<ul>
+<li>Cloud9とGitHub</li>
+<li>ローカルPCとマネージドクラウドの仮想マシン</li>
+<li>マネージドクラウドの仮想マシンとGitHub</li>
+</ul>
+<p>通信の環境が整ったので，マネージドクラウドの仮想マシン上にGitHubのコードをデプロイする．</p>
+<h2 id="仮想マシンの準備"><a class="header" href="#仮想マシンの準備">仮想マシンの準備</a></h2>
+<blockquote>
+<p>Lolipopでの作業</p>
+</blockquote>
+<p>まず，デプロイに関する準備（以下）をする．</p>
+<ul>
+<li>デプロイ用ディレクトリの作成</li>
+<li><code>composer</code>のダウンロード</li>
+<li>必要なパスを通す</li>
+<li>Laravelの準備</li>
+</ul>
+<h3 id="デプロイ用ディレクトリの作成"><a class="header" href="#デプロイ用ディレクトリの作成">デプロイ用ディレクトリの作成</a></h3>
+<p>以下を順に実行する．</p>
+<pre><code class="language-bash">$ cd /var/www
+$ mkdir bin
+$ cd bin
+</code></pre>
+<h3 id="composerのダウンロード"><a class="header" href="#composerのダウンロード">composerのダウンロード</a></h3>
+<pre><code class="language-bash">$ php -r &quot;copy('https://getcomposer.org/installer', 'composer-setup.php');&quot;
+$ php composer-setup.php
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">All settings correct for using Composer
+Downloading...
+
+Composer (version 1.10.8) successfully installed to: /var/www/bin/composer.phar
+Use it: php composer.phar
+</code></pre>
+<p>composerのファイルを移動する．</p>
+<pre><code class="language-bash">$ mv composer.phar composer
+</code></pre>
+<h3 id="パスを通す"><a class="header" href="#パスを通す">パスを通す</a></h3>
+<p>下記のコマンドを実行する．</p>
+<pre><code class="language-bash">$ export PATH=$PATH:/var/www/bin
+</code></pre>
+<p><code>.bash_profile</code>を開き，設定ファイルを編集する．</p>
+<pre><code class="language-bash">$ vi ~/.bash_profile
+</code></pre>
+<p><code>.bash_profile</code>に以下を追記する．</p>
+<pre><code class="language-bash">export PATH=$PATH:/var/www/bin
+</code></pre>
+<h3 id="laravelの準備"><a class="header" href="#laravelの準備">Laravelの準備</a></h3>
+<p>ディレクトリを移動し，Laravelのインストーラを準備する．</p>
+<pre><code class="language-bash">$ cd /var/www
+$ composer global require 'laravel/installer'
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">...
+symfony/console suggests installing psr/log (For using the console logger)
+guzzlehttp/guzzle suggests installing psr/log (Required for using the Log middleware)
+Writing lock file
+Generating autoload files
+11 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+</code></pre>
+<h2 id="github上のコードをデプロイ"><a class="header" href="#github上のコードをデプロイ">GitHub上のコードをデプロイ</a></h2>
+<p>GitHubから自分が作成したプロジェクトのファイルをダウンロードして<code>project</code>ディレクトリにコピーし，アプリケーションが動作するように設定を行う．</p>
+<pre><code class="language-bash">$ git clone YOUR_REPOSITORY_URL project
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Cloning into 'project'...
+Warning: Permanently added the RSA host key for IP address '11.11.111.11' to the list of known hosts.
+remote: Enumerating objects: 140, done.
+remote: Counting objects: 100% (140/140), done.
+remote: Compressing objects: 100% (104/104), done.
+remote: Total 140 (delta 17), reused 140 (delta 17), pack-reused 0
+Receiving objects: 100% (140/140), 195.58 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (17/17), done.
+Checking connectivity... done.
+</code></pre>
+<h3 id="-key-point-2"><a class="header" href="#-key-point-2">💡 Key Point</a></h3>
+<blockquote>
+<p>初回は<code>git clone</code>コマンドでソースコードをダウンロードするが，2回め以降（機能追加した場合など）は<code>git pull</code>コマンドで差分管理する．</p>
+</blockquote>
+<p>デプロイしたディレクトリに移動し，必要なライブラリをインストールする．</p>
+<pre><code class="language-bash">$ cd /var/www/project/
+$ composer install
+</code></pre>
+<p>実行結果（長い）</p>
+<pre><code class="language-bash">...
+Discovered Package: beyondcode/laravel-dump-server
+Discovered Package: fideloper/proxy
+Discovered Package: laravel/tinker
+Discovered Package: nesbot/carbon
+Discovered Package: nunomaduro/collision
+Package manifest generated successfully.
+43 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+</code></pre>
+<h2 id="db関連の準備"><a class="header" href="#db関連の準備">DB関連の準備</a></h2>
+<p>設定ファイルを準備し，DB関連の設定を記述する．</p>
+<pre><code class="language-bash">$ cp .env.example .env
+$ vi .env
+</code></pre>
+<p>以下のように編集する．</p>
+<pre><code class="language-bash">DB_CONNECTION=mysql
+DB_HOST=マネクラ管理画面にあるDBのホスト名
+DB_PORT=3306
+DB_DATABASE=マネクラ管理画面にあるDB名
+DB_USERNAME=マネクラ管理画面にあるユーザー名
+DB_PASSWORD=プロジェクト作成時に決めたパスワード
+</code></pre>
+<p>マイグレーションを実行してテーブルを準備する．</p>
+<pre><code class="language-bash">$ php artisan migrate
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (0.01 seconds)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (0.01 seconds)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (0 seconds)
+Migrating: 2020_06_23_024905_create_tasks_table
+Migrated:  2020_06_23_024905_create_tasks_table (0 seconds)
+</code></pre>
+<p>アプリケーションキーを作成する．</p>
+<pre><code class="language-bash">$ php artisan key:generate
+</code></pre>
+<p>実行結果</p>
+<pre><code class="language-bash">Application key set successfully.
+</code></pre>
+<h2 id="シンボリックリンクの作成"><a class="header" href="#シンボリックリンクの作成">シンボリックリンクの作成</a></h2>
+<p>ルートディレクトリを設定できないので，<code>/var/www/html</code>をシンボリックリンクにして<code>/var/www/project/public/</code>を参照する．</p>
+<pre><code class="language-bash">$ rm -rf /var/www/html/
+$ ln -s /var/www/project/public/ /var/www/html
+</code></pre>
+<p>ブラウザでプロジェクトのURLにアクセスして表示されればOK！</p>
+<p>以上である( `･ω･)b</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
