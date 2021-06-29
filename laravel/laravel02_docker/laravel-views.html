@@ -168,13 +168,13 @@
                         <h1 id="必要な画面の作成"><a class="header" href="#必要な画面の作成">必要な画面の作成</a></h1>
 <h2 id="共通画面の作成"><a class="header" href="#共通画面の作成">共通画面の作成</a></h2>
 <p>実際にブラウザ画面に表示される内容を記述する．ビューファイルは<code>*.blade.php</code>の形式で作成する．これは「bladeテンプレート」と呼ばれる形式であり，コントローラとのデータのやり取りなどに最適化されている．</p>
-<p><strong>ビューファイルは<code>latavel_todo/resources/view</code>ディレクトリ以下に配置する．</strong></p>
+<p><strong>ビューファイルは<code>latavel_todo/resources/views</code>ディレクトリ以下に配置する．</strong></p>
 <p>bladeテンプレートでは共通パーツと個別パーツを組み合わせて画面を構成する．例えば，アプリケーション全体を通して表示されるナビゲーションバーやエラー画面などは共通パーツである．</p>
 <p>それぞれのパーツは「コンポーネント」と呼ばれる．</p>
 <h2 id="共通パーツエラー表示の作成"><a class="header" href="#共通パーツエラー表示の作成">共通パーツ（エラー表示）の作成</a></h2>
 <p>入力値が不正な場合などはエラー画面を表示して対応する．</p>
 <p>todoの入力や編集など複数の画面で必要となるため，共通のコンポーネントとして作成する．</p>
-<p><code>latavel_todo/resources/view</code>の中に<code>common</code>フォルダを作成する．
+<p><code>latavel_todo/resources/views</code>の中に<code>common</code>フォルダを作成する．
 <code>common</code>フォルダの中に<code>errors.blade.php</code>ファイルを作成する．</p>
 <p><code>errors.blade.php</code>に以下の内容を記述する．</p>
 <pre><code class="language-php">@if (count($errors) &gt; 0)
@@ -331,7 +331,7 @@
 <p>画面をリロードすると下記のようにナビゲーションが設置された状態となる（一覧ページと作成ページはまだ作成していないので動作しない点に注意）．</p>
 <p><img src="../img/20210104-navigation.png" alt="ナビゲーション設置" /></p>
 <h2 id="todo作成画面の作成"><a class="header" href="#todo作成画面の作成">todo作成画面の作成</a></h2>
-<p>まず，<code>latavel_todo/resources/view</code>の中に<code>todo</code>フォルダを作成する．</p>
+<p>まず，<code>latavel_todo/resources/views</code>の中に<code>todo</code>フォルダを作成する．</p>
 <p>続いて，<code>todo</code>フォルダの中に以下のファイルを作成する．今後必要になる画面のファイルも合わせて作成している．</p>
 <ul>
 <li><code>index.blade.php</code>（todo一覧画面）</li>

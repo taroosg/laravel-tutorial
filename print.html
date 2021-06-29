@@ -228,10 +228,10 @@
 <p>例として，DBから取り出したデータを一覧画面に表示する流れを考えてみる．</p>
 <h3 id="リクエストからの処理の流れ"><a class="header" href="#リクエストからの処理の流れ">リクエストからの処理の流れ</a></h3>
 <p>リクエスト -&gt; Route -&gt; Controllerの順で処理が実行される．</p>
-<p><img src="laravel/laravel/img/laravel_mvc_01.svg" alt="MVCの流れ1" /></p>
+<p><img src="laravel/./img/laravel_mvc_01.svg" alt="MVCの流れ1" /></p>
 <h3 id="dbから取り出したデータの流れ"><a class="header" href="#dbから取り出したデータの流れ">DBから取り出したデータの流れ</a></h3>
 <p>Model -&gt; Controller -&gt; Viewの順で処理が実行される．</p>
-<p><img src="laravel/laravel/img/laravel_mvc_02.svg" alt="MVCの流れ2" /></p>
+<p><img src="laravel/./img/laravel_mvc_02.svg" alt="MVCの流れ2" /></p>
 <h2 id="コツ"><a class="header" href="#コツ">コツ</a></h2>
 <h3 id="習うより慣れろッ"><a class="header" href="#習うより慣れろッ">習うより慣れろッ！</a></h3>
 <ul>
@@ -327,6 +327,8 @@ Thank you! We hope you build something incredible. Dive in with: cd laravel_todo
 <p>この方法でプロジェクトを作成するとエディタで操作する場合に権限で引っかかる場合があるので権限を変更する．</p>
 <pre><code class="language-bash">$ sudo chmod -R 777 laravel_todo
 </code></pre>
+<p>権限が変更できない場合は下記URLの設定を行い再度コマンドを実行する．</p>
+<p><a href="https://gori.me/mac/mac-tips/112082">参考URL</a></p>
 <h2 id="起動"><a class="header" href="#起動">起動</a></h2>
 <p>早速仮想コンテナを立ち上げる．</p>
 <pre><code class="language-bash">$ cd laravel_todo
@@ -347,6 +349,27 @@ Creating laravel_todo_laravel.test_1 ... done
 <h2 id="動作確認"><a class="header" href="#動作確認">動作確認</a></h2>
 <p>ブラウザでlocalhostにアクセスし，下記画面が表示されればOK．</p>
 <p><img src="laravel/laravel01_docker/../img/20210104-laravel-firstview.png" alt="トップ画面" /></p>
+<p>コマンド実行時にエラーが出る場合や，画面が表示されない場合は以下のケースを確認しよう．</p>
+<h2 id="エラーが出る場合"><a class="header" href="#エラーが出る場合">エラーが出る場合</a></h2>
+<h3 id="m1のmacでerror-no-matching-manifest-for-linuxarm64v8-in-the-manifest-list-entriesが出る"><a class="header" href="#m1のmacでerror-no-matching-manifest-for-linuxarm64v8-in-the-manifest-list-entriesが出る">M1のMacで<code>ERROR: no matching manifest for linux/arm64/v8 in the manifest list entries</code>が出る</a></h3>
+<p><code>docker-compoes.yml</code>に下記を追加</p>
+<pre><code class="language-yml">platform: 'linux/x86_64'
+</code></pre>
+<p>追記場所はこのへん</p>
+<pre><code class="language-yml">mysql:
+    image: 'mysql:8.0'
+    platform: 'linux/x86_64'
+</code></pre>
+<p><a href="https://neoighodaro.com/posts/3-running-laravel-and-docker-on-the-apple-mac-m1">参考：https://neoighodaro.com/posts/3-running-laravel-and-docker-on-the-apple-mac-m1</a></p>
+<h3 id="m1のmacでlaraveltest-failed的なエラーが出る"><a class="header" href="#m1のmacでlaraveltest-failed的なエラーが出る">M1のMacで<code>laravel.test failed</code>的なエラーが出る</a></h3>
+<p>エディタで<code>laravel_todo/vendor/laravel/sail/runtimes/8.0/Dockerfile</code>を開き．34行目と35行目をコメントアウトする．</p>
+<p>↓この2行をコメントアウトする</p>
+<pre><code>&amp;&amp; curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
+&amp;&amp; echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; &gt; /etc/apt/sources.list.d/yarn.list \
+</code></pre>
+<h2 id="いけてそうだけどブラウザで表示できない"><a class="header" href="#いけてそうだけどブラウザで表示できない">いけてそうだけどブラウザで表示できない</a></h2>
+<p>アクセスするときのURLを<code>https://localhost</code>を<code>http://localhost</code>に変更</p>
+<h2 id="終了するとき"><a class="header" href="#終了するとき">終了するとき</a></h2>
 <p>仮想マシン（コンテナ）を終了させる場合は以下のコマンドを実行する．</p>
 <pre><code class="language-bash">$ ./vendor/bin/sail down
 </code></pre>
@@ -813,13 +836,13 @@ class TodoController extends Controller
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="必要な画面の作成"><a class="header" href="#必要な画面の作成">必要な画面の作成</a></h1>
 <h2 id="共通画面の作成"><a class="header" href="#共通画面の作成">共通画面の作成</a></h2>
 <p>実際にブラウザ画面に表示される内容を記述する．ビューファイルは<code>*.blade.php</code>の形式で作成する．これは「bladeテンプレート」と呼ばれる形式であり，コントローラとのデータのやり取りなどに最適化されている．</p>
-<p><strong>ビューファイルは<code>latavel_todo/resources/view</code>ディレクトリ以下に配置する．</strong></p>
+<p><strong>ビューファイルは<code>latavel_todo/resources/views</code>ディレクトリ以下に配置する．</strong></p>
 <p>bladeテンプレートでは共通パーツと個別パーツを組み合わせて画面を構成する．例えば，アプリケーション全体を通して表示されるナビゲーションバーやエラー画面などは共通パーツである．</p>
 <p>それぞれのパーツは「コンポーネント」と呼ばれる．</p>
 <h2 id="共通パーツエラー表示の作成"><a class="header" href="#共通パーツエラー表示の作成">共通パーツ（エラー表示）の作成</a></h2>
 <p>入力値が不正な場合などはエラー画面を表示して対応する．</p>
 <p>todoの入力や編集など複数の画面で必要となるため，共通のコンポーネントとして作成する．</p>
-<p><code>latavel_todo/resources/view</code>の中に<code>common</code>フォルダを作成する．
+<p><code>latavel_todo/resources/views</code>の中に<code>common</code>フォルダを作成する．
 <code>common</code>フォルダの中に<code>errors.blade.php</code>ファイルを作成する．</p>
 <p><code>errors.blade.php</code>に以下の内容を記述する．</p>
 <pre><code class="language-php">@if (count($errors) &gt; 0)
@@ -976,7 +999,7 @@ class TodoController extends Controller
 <p>画面をリロードすると下記のようにナビゲーションが設置された状態となる（一覧ページと作成ページはまだ作成していないので動作しない点に注意）．</p>
 <p><img src="laravel/laravel02_docker/../img/20210104-navigation.png" alt="ナビゲーション設置" /></p>
 <h2 id="todo作成画面の作成"><a class="header" href="#todo作成画面の作成">todo作成画面の作成</a></h2>
-<p>まず，<code>latavel_todo/resources/view</code>の中に<code>todo</code>フォルダを作成する．</p>
+<p>まず，<code>latavel_todo/resources/views</code>の中に<code>todo</code>フォルダを作成する．</p>
 <p>続いて，<code>todo</code>フォルダの中に以下のファイルを作成する．今後必要になる画面のファイルも合わせて作成している．</p>
 <ul>
 <li><code>index.blade.php</code>（todo一覧画面）</li>
