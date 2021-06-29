@@ -45,6 +45,9 @@ Thank you! We hope you build something incredible. Dive in with: cd laravel_todo
 $ sudo chmod -R 777 laravel_todo
 ```
 
+権限が変更できない場合は下記URLの設定を行い再度コマンドを実行する．
+
+[参考URL](https://gori.me/mac/mac-tips/112082)
 
 ## 起動
 
@@ -75,9 +78,48 @@ Creating laravel_todo_laravel.test_1 ... done
 
 ブラウザでlocalhostにアクセスし，下記画面が表示されればOK．
 
-
 ![トップ画面](../img/20210104-laravel-firstview.png)
 
+コマンド実行時にエラーが出る場合や，画面が表示されない場合は以下のケースを確認しよう．
+
+
+## エラーが出る場合
+
+### M1のMacで`ERROR: no matching manifest for linux/arm64/v8 in the manifest list entries`が出る
+
+`docker-compoes.yml`に下記を追加
+
+```yml
+platform: 'linux/x86_64'
+```
+
+追記場所はこのへん
+
+```yml
+mysql:
+    image: 'mysql:8.0'
+    platform: 'linux/x86_64'
+```
+
+[参考：https://neoighodaro.com/posts/3-running-laravel-and-docker-on-the-apple-mac-m1](https://neoighodaro.com/posts/3-running-laravel-and-docker-on-the-apple-mac-m1)
+
+### M1のMacで`laravel.test failed`的なエラーが出る
+
+エディタで`laravel_todo/vendor/laravel/sail/runtimes/8.0/Dockerfile`を開き．34行目と35行目をコメントアウトする．
+
+↓この2行をコメントアウトする
+
+```
+&& curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
+&& echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
+```
+
+## いけてそうだけどブラウザで表示できない
+
+アクセスするときのURLを`https://localhost`を`http://localhost`に変更
+
+
+## 終了するとき
 
 仮想マシン（コンテナ）を終了させる場合は以下のコマンドを実行する．
 
