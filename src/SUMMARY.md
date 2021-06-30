@@ -27,6 +27,7 @@
     - [Laravelプロジェクト作成](./laravel/laravel01_docker/create-project.md)
     - [ライブラリ準備](./laravel/laravel01_docker/add-laravel-breeze.md)
     - [データベース準備](./laravel/laravel01_docker/setup-db.md)
+    - [phpmyadminの追加](./laravel/laravel01_docker/phpmyadmin.md)
 
   - [【Docker編】todoアプリケーションの実装](./laravel/laravel02_docker/README.md)
     - [マイグレーションによるテーブル設計](./laravel/laravel02_docker/laravel-migration.md)
