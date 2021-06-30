@@ -232,7 +232,7 @@ class User extends Authenticatable
 {
   // 省略
 
-  public function get_my_todos()
+  public function todos()
   {
     return $this->hasMany(Todo::class)->orderBy('deadline', 'asc');
   }
@@ -240,6 +240,7 @@ class User extends Authenticatable
 
 ```
 
+ここで，UserとTodoを連携させるためには，子（Todo）のカラムに「`親_id`」（<- 今回は`user_id`）を用意していおく必要がある．
 
 `/laravel_todo/app/Http/Controllers/TodoController.php`の`index()`を内容を以下のように編集する．
 
@@ -251,7 +252,7 @@ use App\Models\User;
 public function index()
 {
   // Userモデルに定義した関数を実行する．
-  $todos = User::find(Auth::user()->id)->get_my_todos;
+  $todos = User::find(Auth::user()->id)->todos;
   return view('todo.index', [
     'todos' => $todos
   ]);
