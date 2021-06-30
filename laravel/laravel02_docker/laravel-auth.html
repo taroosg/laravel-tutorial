@@ -362,13 +362,14 @@ Bye
 {
   // 省略
 
-  public function get_my_todos()
+  public function todos()
   {
     return $this-&gt;hasMany(Todo::class)-&gt;orderBy('deadline', 'asc');
   }
 }
 
 </code></pre>
+<p>ここで，UserとTodoを連携させるためには，子（Todo）のカラムに「<code>親_id</code>」（&lt;- 今回は<code>user_id</code>）を用意していおく必要がある．</p>
 <p><code>/laravel_todo/app/Http/Controllers/TodoController.php</code>の<code>index()</code>を内容を以下のように編集する．</p>
 <pre><code class="language-php">use App\Models\User;
 
@@ -377,7 +378,7 @@ Bye
 public function index()
 {
   // Userモデルに定義した関数を実行する．
-  $todos = User::find(Auth::user()-&gt;id)-&gt;get_my_todos;
+  $todos = User::find(Auth::user()-&gt;id)-&gt;todos;
   return view('todo.index', [
     'todos' =&gt; $todos
   ]);
