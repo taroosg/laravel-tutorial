@@ -44,7 +44,7 @@
   - [デプロイ](./laravel/deploy/README.md)
 
     - [デプロイの概要](./laravel/deploy/deploy-image.md)
-    <!-- - [【AWS Cloud9編】実装したコードをGitHubへpush](./laravel/deploy/cloud9-to-github.md) -->
+
     - [【Docker編】実装したコードをGitHubへpush](./laravel/deploy/docker-to-github.md)
     - [ローカルからロリポップマネージドクラウドへのログイン](./laravel/deploy/setup-lolipop.md)
     - [ロリポップマネージドクラウドとGitHubのSSH通信設定](./laravel/deploy/lolipop-to-github.md)
